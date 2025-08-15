@@ -1,0 +1,142 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Conda
+.conda/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IPython
+profile_default/
+ipython_config.py
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ML/DL Specific
+# Model checkpoints and weights (keep structure, exclude large files)
+Results/models/*.pth
+Results/models/*.pt
+Results/models/*.pkl
+Results/models/*.h5
+Results/models/*.ckpt
+*.weights
+
+# Training logs and outputs
+Results/logs/*.log
+Results/logs/*.txt
+Results/logs/runs/
+Results/logs/tensorboard/
+
+# Dataset files (too large for git)
+Datasets/CelebA/
+Datasets/LFW/
+Datasets/YLFW/
+Datasets/*.zip
+Datasets/*.tar.gz
+Datasets/*.rar
+Datasets/**/*.jpg
+Datasets/**/*.png
+Datasets/**/*.jpeg
+Datasets/**/*.csv
+Datasets/**/*.txt
+!Datasets/README.md
+!Datasets/*_api.py
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Cache
+.cache/
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.hypothesis/
+
+# GPU cache
+.nv/
+
+# Weights & Biases
+wandb/
+
+# TensorBoard
+runs/
+tb_logs/
+
+# Output files
+*.out
+*.log
+
+# Backup files
+*.bak
+*.backup
+
+# Large data files
+*.h5
+*.hdf5
+*.mat
+
+# Pickled files
+*.pickle
+*.pkl
+
+# NumPy files
+*.npy
+*.npz
+
+# Don't ignore these important files
+!.gitignore
+!environment.yml
+!requirements.txt
+!README.md
+!*/README.md

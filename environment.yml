@@ -1,0 +1,21 @@
+name: cosc595-implementation
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python
+  - pytorch-cuda
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pandas
+  - numpy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - tqdm
+  - pillow
+  - jupyter
+  - ipykernel
+  - Kaggle API
