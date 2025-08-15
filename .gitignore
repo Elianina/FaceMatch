@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Virtual Environments
+venv/
+env/
+.conda/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model Files (too large for git)
+*.pth
+*.pt
+*.pkl
+*.h5
+*.weights
+
+# Datasets (too large for git)
+Datasets/CelebA/
+Datasets/LFW/
+Datasets/YLFW/
+Datasets/*.zip
+Datasets/*.tar.gz
+Datasets/**/*.jpg
+Datasets/**/*.png
+Datasets/**/*.csv
+!Datasets/README.md
+!Datasets/*_api.py
+
+# Results and Logs
+Results/models/*.pth
+Results/models/*.pt
+Results/logs/*.log
+Results/logs/runs/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Temporary
+*.tmp
+*.temp
+temp/
+
+# Cache
+.cache/
+.pytest_cache/
