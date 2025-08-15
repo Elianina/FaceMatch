@@ -28,8 +28,8 @@ def main():
     # ========================================================================
 
     CONFIG = {
-        'img_dir': r"C:\Users\carlf\Desktop\COSC595 - Models and Datasets\CelebA\img_align_celeba\img_align_celeba",  # add the path to the CelebA image file
-        'attr_file': r"C:\Users\carlf\Desktop\COSC595 - Models and Datasets\CelebA\list_attr_celeba.csv",  # add the path to the CelebA list_attr CSV file
+        'img_dir': r"",  # add the path to the CelebA image file
+        'attr_file': r"",  # add the path to the CelebA list_attr CSV file
 
         'batch_size': 64,  # Number of images processed simultaneously
         'num_epochs': 1,  # Total training epochs
