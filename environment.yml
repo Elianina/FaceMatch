@@ -19,3 +19,4 @@ dependencies:
   - jupyter
   - ipykernel
   - Kaggle API
+  - matplotlib

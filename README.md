@@ -36,6 +36,7 @@ and potential expansion to EfficientNet-B4, ResNet-50, and DenseNet-121 models.
   - jupyter
   - ipykernel
   - Kaggle API
+  - matplotlib
 
 ### Environment Setup
 1.Clone the repository and change directory into the project's root.
@@ -65,7 +66,7 @@ conda install pandas numpy scikit-learn matplotlib tqdm pillow jupyter -c conda-
 ### Running Models
 #### VGG-16
 ```bash
-cd Models/VGG-16   # Change directory to the model's root
+cd Models/VGG16   # Change directory to the model's root
 python main.py       # Run the VGG-16 model
 `````
 #### EfficientNet-B4

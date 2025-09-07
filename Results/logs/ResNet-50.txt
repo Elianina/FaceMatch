@@ -1,0 +1,802 @@
+Starting ResNet-50 Gender Classification Training
+==============================================================
+
+==============================================================
+ResNet-50 Gender Classification
+==============================================================
+
+Project: COSC595 Information Technology Project: Implementation
+Model: ResNet-50
+Task: Binary Gender Classification (Male/Female)
+
+==============================================================
+
+Device Configuration:
+	Utilising Device: CUDA
+	GPU Name: NVIDIA GeForce RTX 3050 Ti Laptop GPU
+	GPU Memory: 3 GB
+
+
+---------------
+Loading Dataset
+---------------
+
+Loading dataset attributes from:
+	C:\COSC595\archive\list_attr_celeba.csv
+
+Loaded Images from CSV file:
+	202599 images
+
+Overall Gender Statistics:
+	Female: 118165 (58.3% Female),
+	Male: 84434 (41.7% Male)
+
+--------------------------------------------------------------
+TRAINING Set: 162079 images (80%)
+--------------------------------------------------------------
+
+Training Gender Distribution:
+	Female: 94532 (58.3% Female),
+	Male: 67547 (41.7% Male)
+
+--------------------------------------------------------------
+VALIDATION Set: 20260 images (10%)
+--------------------------------------------------------------
+
+Validation Gender Distribution:
+	Female: 11816 (58.3% Female),
+	Male: 8444 (41.7% Male)
+
+--------------------------------------------------------------
+TESTING Set: 20260 images (10%)
+--------------------------------------------------------------
+
+Testing Gender distribution:
+	Female: 11817 (58.3% Female),
+	Male: 8443 (41.7% Male)
+
+Dataset loaded successfully!
+
+==============================================================
+Initialising ResNet-50 Model
+==============================================================
+
+Model Configuration:
+	Classifier Dropout: 0.5
+	Block Dropout: 0.0
+	Number of Classes: 2 (Male/Female)
+
+Model Statistics:
+	Total Parameters: 23,516,226
+	Trainable Parameters: 23,516,226
+	Model Size: 89.7 MB
+	Memory Footprint: ~179 MB (including gradients)
+
+==============================================================
+Starting Training Phase
+==============================================================
+
+Output directories verified/created successfully
+
+Starting training for 40 epochs
+
+--------------------------------------------------------------
+Epoch 1/40
+--------------------------------------------------------------
+
+Epoch 1 Training: 100%|██████████| 5065/5065 [38:50<00:00,  2.17it/s, , Loss=0.2094, Acc=91.14%]
+Validation: 100%|██████████| 634/634 [01:25<00:00,  7.39it/s, , Loss=0.1811, Acc=92.59%]
+
+
+Epoch 1 Results:
+	Training Loss: 0.2094, Training Accuracy: 91.14%
+	Validation Loss: 0.1811, Validation Accuracy: 92.59%
+	Learning Rate: 0.001000
+
+
+Validation Accuracy: 92.59%   |   The new best model - Saved!
+
+
+--------------------------------------------------------------
+Epoch 2/40
+--------------------------------------------------------------
+
+Epoch 2 Training: 100%|██████████| 5065/5065 [23:38<00:00,  3.57it/s, , Loss=0.1280, Acc=95.02%]
+Validation: 100%|██████████| 634/634 [01:20<00:00,  7.87it/s, , Loss=0.0951, Acc=96.26%]
+
+
+Epoch 2 Results:
+	Training Loss (TL): 0.1280, Training Accuracy (TA): 95.02%
+	Validation Loss (VL): 0.0951, Validation Accuracy (VA): 96.26%
+	Learning Rate (LR): 0.000999
+
+
+Validation Accuracy: 96.26%   |   The new best model - Saved!
+
+
+--------------------------------------------------------------
+Epoch 3/40
+--------------------------------------------------------------
+
+Epoch 3 Training: 100%|██████████| 5065/5065 [23:33<00:00,  3.58it/s, , Loss=0.1081, Acc=95.91%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.35it/s, , Loss=0.0909, Acc=96.47%]
+
+
+Epoch 3 Results:
+	Training Loss (TL): 0.1081, Training Accuracy (TA): 95.91%
+	Validation Loss (VL): 0.0909, Validation Accuracy (VA): 96.47%
+	Learning Rate (LR): 0.000998
+
+
+Validation Accuracy: 96.47%   |   The new best model - Saved!
+
+
+--------------------------------------------------------------
+Epoch 4/40
+--------------------------------------------------------------
+
+Epoch 4 Training: 100%|██████████| 5065/5065 [23:36<00:00,  3.58it/s, , Loss=0.0997, Acc=96.25%]
+Validation: 100%|██████████| 634/634 [01:25<00:00,  7.38it/s, , Loss=0.0812, Acc=96.98%]
+
+
+Epoch 4 Results:
+	Training Loss (TL): 0.0997, Training Accuracy (TA): 96.25%
+	Validation Loss (VL): 0.0811, Validation Accuracy (VA): 96.98%
+	Learning Rate (LR): 0.000996
+
+
+Validation Accuracy: 96.98%   |   The new best model - Saved!
+
+
+--------------------------------------------------------------
+Epoch 5/40
+--------------------------------------------------------------
+
+Epoch 5 Training: 100%|██████████| 5065/5065 [23:37<00:00,  3.57it/s, , Loss=0.0929, Acc=96.52%]
+Validation: 100%|██████████| 634/634 [01:24<00:00,  7.49it/s, , Loss=0.0822, Acc=96.81%]
+
+
+Epoch 5 Results:
+	Training Loss (TL): 0.0929, Training Accuracy (TA): 96.52%
+	Validation Loss (VL): 0.0822, Validation Accuracy (VA): 96.81%
+	Learning Rate (LR): 0.000994
+
+
+Validation Accuracy: 96.81%   |
+
+
+--------------------------------------------------------------
+Epoch 6/40
+--------------------------------------------------------------
+
+Epoch 6 Training: 100%|██████████| 5065/5065 [23:35<00:00,  3.58it/s, , Loss=0.0877, Acc=96.73%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.34it/s, , Loss=0.0776, Acc=97.05%]
+
+
+Epoch 6 Results:
+	Training Loss (TL): 0.0877, Training Accuracy (TA): 96.73%
+	Validation Loss (VL): 0.0775, Validation Accuracy (VA): 97.05%
+	Learning Rate (LR): 0.000991
+
+
+Validation Accuracy: 97.05%   |   The new best model - Saved!
+
+
+--------------------------------------------------------------
+Epoch 7/40
+--------------------------------------------------------------
+
+Epoch 7 Training: 100%|██████████| 5065/5065 [23:39<00:00,  3.57it/s, , Loss=0.0847, Acc=96.85%]
+Validation: 100%|██████████| 634/634 [01:21<00:00,  7.80it/s, , Loss=0.0841, Acc=96.79%]
+
+
+Epoch 7 Results:
+	Training Loss (TL): 0.0847, Training Accuracy (TA): 96.85%
+	Validation Loss (VL): 0.0841, Validation Accuracy (VA): 96.79%
+	Learning Rate (LR): 0.000988
+
+
+Validation Accuracy: 96.79%   |
+
+
+--------------------------------------------------------------
+Epoch 8/40
+--------------------------------------------------------------
+
+Epoch 8 Training: 100%|██████████| 5065/5065 [23:34<00:00,  3.58it/s, , Loss=0.0816, Acc=97.00%]
+Validation: 100%|██████████| 634/634 [01:25<00:00,  7.39it/s, , Loss=0.0696, Acc=97.41%]
+
+
+Epoch 8 Results:
+	Training Loss (TL): 0.0816, Training Accuracy (TA): 97.00%
+	Validation Loss (VL): 0.0696, Validation Accuracy (VA): 97.41%
+	Learning Rate (LR): 0.000984
+
+
+Validation Accuracy: 97.41%   |   The new best model - Saved!
+
+
+--------------------------------------------------------------
+Epoch 9/40
+--------------------------------------------------------------
+
+Epoch 9 Training: 100%|██████████| 5065/5065 [23:33<00:00,  3.58it/s, , Loss=0.0795, Acc=97.08%]
+Validation: 100%|██████████| 634/634 [01:25<00:00,  7.45it/s, , Loss=0.0724, Acc=97.23%]
+
+
+Epoch 9 Results:
+	Training Loss (TL): 0.0795, Training Accuracy (TA): 97.08%
+	Validation Loss (VL): 0.0724, Validation Accuracy (VA): 97.23%
+	Learning Rate (LR): 0.000980
+
+
+Validation Accuracy: 97.23%   |
+
+
+--------------------------------------------------------------
+Epoch 10/40
+--------------------------------------------------------------
+
+Epoch 10 Training: 100%|██████████| 5065/5065 [23:36<00:00,  3.57it/s, , Loss=0.0782, Acc=97.08%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.33it/s, , Loss=0.0698, Acc=97.48%]
+
+
+Epoch 10 Results:
+	Training Loss (TL): 0.0782, Training Accuracy (TA): 97.08%
+	Validation Loss (VL): 0.0698, Validation Accuracy (VA): 97.48%
+	Learning Rate (LR): 0.000976
+
+
+Validation Accuracy: 97.48%   |   The new best model - Saved!
+
+
+--------------------------------------------------------------
+Epoch 11/40
+--------------------------------------------------------------
+
+Epoch 11 Training: 100%|██████████| 5065/5065 [23:37<00:00,  3.57it/s, , Loss=0.0760, Acc=97.20%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.34it/s, , Loss=0.0737, Acc=97.09%]
+
+
+Epoch 11 Results:
+	Training Loss (TL): 0.0760, Training Accuracy (TA): 97.20%
+	Validation Loss (VL): 0.0737, Validation Accuracy (VA): 97.09%
+	Learning Rate (LR): 0.000970
+
+
+Validation Accuracy: 97.09%   |
+
+
+--------------------------------------------------------------
+Epoch 12/40
+--------------------------------------------------------------
+
+Epoch 12 Training: 100%|██████████| 5065/5065 [23:38<00:00,  3.57it/s, , Loss=0.0747, Acc=97.27%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.35it/s, , Loss=0.0721, Acc=97.34%]
+
+
+Epoch 12 Results:
+	Training Loss (TL): 0.0747, Training Accuracy (TA): 97.27%
+	Validation Loss (VL): 0.0720, Validation Accuracy (VA): 97.34%
+	Learning Rate (LR): 0.000965
+
+
+Validation Accuracy: 97.34%   |
+
+
+--------------------------------------------------------------
+Epoch 13/40
+--------------------------------------------------------------
+
+Epoch 13 Training: 100%|██████████| 5065/5065 [23:37<00:00,  3.57it/s, , Loss=0.0728, Acc=97.30%]
+Validation: 100%|██████████| 634/634 [01:20<00:00,  7.85it/s, , Loss=0.0669, Acc=97.59%]
+
+
+Epoch 13 Results:
+	Training Loss (TL): 0.0728, Training Accuracy (TA): 97.30%
+	Validation Loss (VL): 0.0668, Validation Accuracy (VA): 97.59%
+	Learning Rate (LR): 0.000959
+
+
+Validation Accuracy: 97.59%   |   The new best model - Saved!
+
+
+--------------------------------------------------------------
+Epoch 14/40
+--------------------------------------------------------------
+
+Epoch 14 Training: 100%|██████████| 5065/5065 [23:33<00:00,  3.58it/s, , Loss=0.0728, Acc=97.32%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.30it/s, , Loss=0.0952, Acc=96.34%]
+
+
+Epoch 14 Results:
+	Training Loss (TL): 0.0728, Training Accuracy (TA): 97.32%
+	Validation Loss (VL): 0.0950, Validation Accuracy (VA): 96.34%
+	Learning Rate (LR): 0.000952
+
+
+Validation Accuracy: 96.34%   |
+
+
+--------------------------------------------------------------
+Epoch 15/40
+--------------------------------------------------------------
+
+Epoch 15 Training: 100%|██████████| 5065/5065 [23:37<00:00,  3.57it/s, , Loss=0.0727, Acc=97.32%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.31it/s, , Loss=0.0617, Acc=97.83%]
+
+
+Epoch 15 Results:
+	Training Loss (TL): 0.0727, Training Accuracy (TA): 97.32%
+	Validation Loss (VL): 0.0616, Validation Accuracy (VA): 97.83%
+	Learning Rate (LR): 0.000946
+
+
+Validation Accuracy: 97.83%   |   The new best model - Saved!
+
+
+--------------------------------------------------------------
+Epoch 16/40
+--------------------------------------------------------------
+
+Epoch 16 Training: 100%|██████████| 5065/5065 [23:39<00:00,  3.57it/s, , Loss=0.0711, Acc=97.40%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.37it/s, , Loss=0.0648, Acc=97.63%]
+
+
+Epoch 16 Results:
+	Training Loss (TL): 0.0711, Training Accuracy (TA): 97.40%
+	Validation Loss (VL): 0.0647, Validation Accuracy (VA): 97.63%
+	Learning Rate (LR): 0.000938
+
+
+Validation Accuracy: 97.63%   |
+
+
+--------------------------------------------------------------
+Epoch 17/40
+--------------------------------------------------------------
+
+Epoch 17 Training: 100%|██████████| 5065/5065 [23:37<00:00,  3.57it/s, , Loss=0.0708, Acc=97.40%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.34it/s, , Loss=0.0700, Acc=97.36%]
+
+
+Epoch 17 Results:
+	Training Loss (TL): 0.0708, Training Accuracy (TA): 97.40%
+	Validation Loss (VL): 0.0699, Validation Accuracy (VA): 97.36%
+	Learning Rate (LR): 0.000930
+
+
+Validation Accuracy: 97.36%   |
+
+
+--------------------------------------------------------------
+Epoch 18/40
+--------------------------------------------------------------
+
+Epoch 18 Training: 100%|██████████| 5065/5065 [23:37<00:00,  3.57it/s, , Loss=0.0706, Acc=97.41%]
+Validation: 100%|██████████| 634/634 [01:27<00:00,  7.29it/s, , Loss=0.0736, Acc=97.25%]
+
+
+Epoch 18 Results:
+	Training Loss (TL): 0.0706, Training Accuracy (TA): 97.41%
+	Validation Loss (VL): 0.0736, Validation Accuracy (VA): 97.25%
+	Learning Rate (LR): 0.000922
+
+
+Validation Accuracy: 97.25%   |
+
+
+--------------------------------------------------------------
+Epoch 19/40
+--------------------------------------------------------------
+
+Epoch 19 Training: 100%|██████████| 5065/5065 [23:37<00:00,  3.57it/s, , Loss=0.0697, Acc=97.47%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.32it/s, , Loss=0.0616, Acc=97.71%]
+
+
+Epoch 19 Results:
+	Training Loss (TL): 0.0697, Training Accuracy (TA): 97.47%
+	Validation Loss (VL): 0.0616, Validation Accuracy (VA): 97.71%
+	Learning Rate (LR): 0.000914
+
+
+Validation Accuracy: 97.71%   |
+
+
+--------------------------------------------------------------
+Epoch 20/40
+--------------------------------------------------------------
+
+Epoch 20 Training: 100%|██████████| 5065/5065 [23:37<00:00,  3.57it/s, , Loss=0.0679, Acc=97.54%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.35it/s, , Loss=0.1183, Acc=95.17%]
+
+
+Epoch 20 Results:
+	Training Loss (TL): 0.0679, Training Accuracy (TA): 97.54%
+	Validation Loss (VL): 0.1181, Validation Accuracy (VA): 95.17%
+	Learning Rate (LR): 0.000905
+
+
+Validation Accuracy: 95.17%   |
+
+
+--------------------------------------------------------------
+Epoch 21/40
+--------------------------------------------------------------
+
+Epoch 21 Training: 100%|██████████| 5065/5065 [23:38<00:00,  3.57it/s, , Loss=0.0685, Acc=97.54%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.37it/s, , Loss=0.0655, Acc=97.56%]
+
+
+Epoch 21 Results:
+	Training Loss (TL): 0.0685, Training Accuracy (TA): 97.54%
+	Validation Loss (VL): 0.0654, Validation Accuracy (VA): 97.56%
+	Learning Rate (LR): 0.000895
+
+
+Validation Accuracy: 97.56%   |
+
+
+--------------------------------------------------------------
+Epoch 22/40
+--------------------------------------------------------------
+
+Epoch 22 Training: 100%|██████████| 5065/5065 [23:37<00:00,  3.57it/s, , Loss=0.0676, Acc=97.55%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.31it/s, , Loss=0.0665, Acc=97.47%]
+
+
+Epoch 22 Results:
+	Training Loss (TL): 0.0676, Training Accuracy (TA): 97.55%
+	Validation Loss (VL): 0.0664, Validation Accuracy (VA): 97.47%
+	Learning Rate (LR): 0.000885
+
+
+Validation Accuracy: 97.47%   |
+
+
+--------------------------------------------------------------
+Epoch 23/40
+--------------------------------------------------------------
+
+Epoch 23 Training: 100%|██████████| 5065/5065 [23:37<00:00,  3.57it/s, , Loss=0.0677, Acc=97.54%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.34it/s, , Loss=0.0612, Acc=97.83%]
+
+
+Epoch 23 Results:
+	Training Loss (TL): 0.0677, Training Accuracy (TA): 97.54%
+	Validation Loss (VL): 0.0611, Validation Accuracy (VA): 97.83%
+	Learning Rate (LR): 0.000875
+
+
+Validation Accuracy: 97.83%   |
+
+
+--------------------------------------------------------------
+Epoch 24/40
+--------------------------------------------------------------
+
+Epoch 24 Training: 100%|██████████| 5065/5065 [23:37<00:00,  3.57it/s, , Loss=0.0661, Acc=97.59%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.34it/s, , Loss=0.0710, Acc=97.38%]
+
+
+Epoch 24 Results:
+	Training Loss (TL): 0.0661, Training Accuracy (TA): 97.59%
+	Validation Loss (VL): 0.0709, Validation Accuracy (VA): 97.38%
+	Learning Rate (LR): 0.000864
+
+
+Validation Accuracy: 97.38%   |
+
+
+--------------------------------------------------------------
+Epoch 25/40
+--------------------------------------------------------------
+
+Epoch 25 Training: 100%|██████████| 5065/5065 [23:39<00:00,  3.57it/s, , Loss=0.0665, Acc=97.59%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.32it/s, , Loss=0.0759, Acc=97.02%]
+
+
+Epoch 25 Results:
+	Training Loss (TL): 0.0665, Training Accuracy (TA): 97.59%
+	Validation Loss (VL): 0.0757, Validation Accuracy (VA): 97.02%
+	Learning Rate (LR): 0.000854
+
+
+Validation Accuracy: 97.02%   |
+
+
+--------------------------------------------------------------
+Epoch 26/40
+--------------------------------------------------------------
+
+Epoch 26 Training: 100%|██████████| 5065/5065 [23:39<00:00,  3.57it/s, , Loss=0.0658, Acc=97.60%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.30it/s, , Loss=0.0568, Acc=97.98%]
+
+
+Epoch 26 Results:
+	Training Loss (TL): 0.0658, Training Accuracy (TA): 97.60%
+	Validation Loss (VL): 0.0567, Validation Accuracy (VA): 97.98%
+	Learning Rate (LR): 0.000842
+
+
+Validation Accuracy: 97.98%   |   The new best model - Saved!
+
+
+--------------------------------------------------------------
+Epoch 27/40
+--------------------------------------------------------------
+
+Epoch 27 Training: 100%|██████████| 5065/5065 [23:38<00:00,  3.57it/s, , Loss=0.0646, Acc=97.71%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.33it/s, , Loss=0.0893, Acc=96.67%]
+
+
+Epoch 27 Results:
+	Training Loss (TL): 0.0646, Training Accuracy (TA): 97.71%
+	Validation Loss (VL): 0.0892, Validation Accuracy (VA): 96.67%
+	Learning Rate (LR): 0.000831
+
+
+Validation Accuracy: 96.67%   |
+
+
+--------------------------------------------------------------
+Epoch 28/40
+--------------------------------------------------------------
+
+Epoch 28 Training: 100%|██████████| 5065/5065 [23:38<00:00,  3.57it/s, , Loss=0.0646, Acc=97.64%]
+Validation: 100%|██████████| 634/634 [01:20<00:00,  7.85it/s, , Loss=0.0599, Acc=97.77%]
+
+
+Epoch 28 Results:
+	Training Loss (TL): 0.0646, Training Accuracy (TA): 97.64%
+	Validation Loss (VL): 0.0599, Validation Accuracy (VA): 97.77%
+	Learning Rate (LR): 0.000819
+
+
+Validation Accuracy: 97.77%   |
+
+
+--------------------------------------------------------------
+Epoch 29/40
+--------------------------------------------------------------
+
+Epoch 29 Training: 100%|██████████| 5065/5065 [23:34<00:00,  3.58it/s, , Loss=0.0642, Acc=97.68%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.36it/s, , Loss=0.0612, Acc=97.87%]
+
+
+Epoch 29 Results:
+	Training Loss (TL): 0.0642, Training Accuracy (TA): 97.68%
+	Validation Loss (VL): 0.0611, Validation Accuracy (VA): 97.87%
+	Learning Rate (LR): 0.000806
+
+
+Validation Accuracy: 97.87%   |
+
+
+--------------------------------------------------------------
+Epoch 30/40
+--------------------------------------------------------------
+
+Epoch 30 Training: 100%|██████████| 5065/5065 [23:38<00:00,  3.57it/s, , Loss=0.0640, Acc=97.68%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.31it/s, , Loss=0.0608, Acc=97.79%]
+
+
+Epoch 30 Results:
+	Training Loss (TL): 0.0640, Training Accuracy (TA): 97.68%
+	Validation Loss (VL): 0.0608, Validation Accuracy (VA): 97.79%
+	Learning Rate (LR): 0.000794
+
+
+Validation Accuracy: 97.79%   |
+
+
+--------------------------------------------------------------
+Epoch 31/40
+--------------------------------------------------------------
+
+Epoch 31 Training: 100%|██████████| 5065/5065 [23:38<00:00,  3.57it/s, , Loss=0.0630, Acc=97.71%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.33it/s, , Loss=0.0621, Acc=97.81%]
+
+
+Epoch 31 Results:
+	Training Loss (TL): 0.0630, Training Accuracy (TA): 97.71%
+	Validation Loss (VL): 0.0621, Validation Accuracy (VA): 97.81%
+	Learning Rate (LR): 0.000781
+
+
+Validation Accuracy: 97.81%   |
+
+
+--------------------------------------------------------------
+Epoch 32/40
+--------------------------------------------------------------
+
+Epoch 32 Training: 100%|██████████| 5065/5065 [23:38<00:00,  3.57it/s, , Loss=0.0629, Acc=97.74%]
+Validation: 100%|██████████| 634/634 [01:21<00:00,  7.81it/s, , Loss=0.0621, Acc=97.75%]
+
+
+Epoch 32 Results:
+	Training Loss (TL): 0.0629, Training Accuracy (TA): 97.74%
+	Validation Loss (VL): 0.0621, Validation Accuracy (VA): 97.75%
+	Learning Rate (LR): 0.000768
+
+
+Validation Accuracy: 97.75%   |
+
+
+--------------------------------------------------------------
+Epoch 33/40
+--------------------------------------------------------------
+
+Epoch 33 Training: 100%|██████████| 5065/5065 [23:32<00:00,  3.58it/s, , Loss=0.0621, Acc=97.76%]
+Validation: 100%|██████████| 634/634 [01:25<00:00,  7.43it/s, , Loss=0.0680, Acc=97.60%]
+
+
+Epoch 33 Results:
+	Training Loss (TL): 0.0621, Training Accuracy (TA): 97.76%
+	Validation Loss (VL): 0.0680, Validation Accuracy (VA): 97.60%
+	Learning Rate (LR): 0.000755
+
+
+Validation Accuracy: 97.60%   |
+
+
+--------------------------------------------------------------
+Epoch 34/40
+--------------------------------------------------------------
+
+Epoch 34 Training: 100%|██████████| 5065/5065 [23:36<00:00,  3.58it/s, , Loss=0.0617, Acc=97.80%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.32it/s, , Loss=0.0623, Acc=97.72%]
+
+
+Epoch 34 Results:
+	Training Loss (TL): 0.0617, Training Accuracy (TA): 97.80%
+	Validation Loss (VL): 0.0622, Validation Accuracy (VA): 97.72%
+	Learning Rate (LR): 0.000741
+
+
+Validation Accuracy: 97.72%   |
+
+
+--------------------------------------------------------------
+Epoch 35/40
+--------------------------------------------------------------
+
+Epoch 35 Training: 100%|██████████| 5065/5065 [23:36<00:00,  3.58it/s, , Loss=0.0609, Acc=97.82%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.34it/s, , Loss=0.0530, Acc=98.13%]
+
+
+Epoch 35 Results:
+	Training Loss (TL): 0.0609, Training Accuracy (TA): 97.82%
+	Validation Loss (VL): 0.0530, Validation Accuracy (VA): 98.13%
+	Learning Rate (LR): 0.000727
+
+
+Validation Accuracy: 98.13%   |   The new best model - Saved!
+
+
+--------------------------------------------------------------
+Epoch 36/40
+--------------------------------------------------------------
+
+Epoch 36 Training: 100%|██████████| 5065/5065 [23:38<00:00,  3.57it/s, , Loss=0.0605, Acc=97.84%]
+Validation: 100%|██████████| 634/634 [01:25<00:00,  7.44it/s, , Loss=0.0611, Acc=97.71%]
+
+
+Epoch 36 Results:
+	Training Loss (TL): 0.0605, Training Accuracy (TA): 97.84%
+	Validation Loss (VL): 0.0611, Validation Accuracy (VA): 97.71%
+	Learning Rate (LR): 0.000713
+
+
+Validation Accuracy: 97.71%   |
+
+
+--------------------------------------------------------------
+Epoch 37/40
+--------------------------------------------------------------
+
+Epoch 37 Training: 100%|██████████| 5065/5065 [23:39<00:00,  3.57it/s, , Loss=0.0597, Acc=97.86%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.33it/s, , Loss=0.0533, Acc=98.05%]
+
+
+Epoch 37 Results:
+	Training Loss (TL): 0.0597, Training Accuracy (TA): 97.86%
+	Validation Loss (VL): 0.0533, Validation Accuracy (VA): 98.05%
+	Learning Rate (LR): 0.000699
+
+
+Validation Accuracy: 98.05%   |
+
+
+--------------------------------------------------------------
+Epoch 38/40
+--------------------------------------------------------------
+
+Epoch 38 Training: 100%|██████████| 5065/5065 [23:39<00:00,  3.57it/s, , Loss=0.0598, Acc=97.83%]
+Validation: 100%|██████████| 634/634 [01:25<00:00,  7.38it/s, , Loss=0.0645, Acc=97.76%]
+
+
+Epoch 38 Results:
+	Training Loss (TL): 0.0598, Training Accuracy (TA): 97.83%
+	Validation Loss (VL): 0.0644, Validation Accuracy (VA): 97.76%
+	Learning Rate (LR): 0.000684
+
+
+Validation Accuracy: 97.76%   |
+
+
+--------------------------------------------------------------
+Epoch 39/40
+--------------------------------------------------------------
+
+Epoch 39 Training: 100%|██████████| 5065/5065 [23:40<00:00,  3.57it/s, , Loss=0.0587, Acc=97.90%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.35it/s, , Loss=0.0607, Acc=97.82%]
+
+
+Epoch 39 Results:
+	Training Loss (TL): 0.0587, Training Accuracy (TA): 97.90%
+	Validation Loss (VL): 0.0606, Validation Accuracy (VA): 97.82%
+	Learning Rate (LR): 0.000669
+
+
+Validation Accuracy: 97.82%   |
+
+
+--------------------------------------------------------------
+Epoch 40/40
+--------------------------------------------------------------
+
+Epoch 40 Training: 100%|██████████| 5065/5065 [23:38<00:00,  3.57it/s, , Loss=0.0594, Acc=97.87%]
+Validation: 100%|██████████| 634/634 [01:26<00:00,  7.33it/s, , Loss=0.0559, Acc=98.08%]
+
+
+Epoch 40 Results:
+	Training Loss (TL): 0.0594, Training Accuracy (TA): 97.87%
+	Validation Loss (VL): 0.0559, Validation Accuracy (VA): 98.08%
+	Learning Rate (LR): 0.000655
+
+
+Validation Accuracy: 98.08%   |
+
+
+==============================================================
+TRAINING COMPLETED
+==============================================================
+
+Best validation accuracy: 98.13% (Epoch 35)
+
+==============================================================
+Testing ResNet-50 model...
+==============================================================
+
+Evaluating on test set. Please wait.
+
+Testing: 100%|██████████| 634/634 [01:26<00:00,  7.34it/s, , Loss=0.0578, Acc=97.94%]
+
+Evaluation Complete
+
+Test Loss: 0.0577   |   Test Acc: 97.94%
+
+=============================================================
+=              MODEL CYCLE COMPLETE                  =
+=============================================================
+
+==============================================================
+FINAL RESULTS SUMMARY
+==============================================================
+Best Validation Accuracy: 98.13% (achieved at Epoch 35)
+Final Test Accuracy: 97.94%
+Final Test Loss: 0.0577
+Model saved to: ../../Results/models/ResNet50_best.pth
+
+Performance Analysis:
+Excellent performance! Model achieved SOTA accuracy.
+==============================================================
+ResNet-50 training completed successfully!
+Check the Results directory for saved model and logs
+==============================================================
+
+Training session completed with 97.94% test accuracy
+==============================================================
+Script execution finished.
