@@ -7,7 +7,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.utils.checkpoint as cp
 from torch import Tensor
-from torch.jit.annotations import List
 from collections import OrderedDict
 
 
@@ -50,7 +49,7 @@ class _DenseLayer(nn.Module):
         bottleneck_output = self.conv1(self.relu1(self.norm1(concated_features)))
         return bottleneck_output
 
-    def any_requires_grad(self, input):
+    def has_gradients(self, input):
         for tensor in input:
             if tensor.requires_grad:
                 return True
@@ -69,7 +68,7 @@ class _DenseLayer(nn.Module):
         else:
             prev_features = input
 
-        if self.memory_efficient and self.any_requires_grad(prev_features):
+        if self.memory_efficient and self.has_gradients(prev_features):
             if torch.jit.is_scripting():
                 raise Exception("Memory Efficient not supported in JIT")
             bottleneck_output = self.call_checkpoint_bottleneck(prev_features)

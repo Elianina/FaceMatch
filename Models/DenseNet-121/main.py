@@ -1,10 +1,6 @@
-"""
-DenseNet-121 Gender Classification - Main Entry Point
-
-Usage:
-    `python main.py`
-
-"""
+# ============================================================================
+# Imports and Dependencies
+# ============================================================================
 
 import os
 import sys
@@ -17,39 +13,43 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from model import DenseNet121Gender
 from data_loader import create_data_loaders
 from trainer import train_model
+from FaceMatch.utils.log_utils import start_logging, stop_logging
 
 warnings.filterwarnings('ignore')
 
 
+# ============================================================================
+# Main Training Function
+# ============================================================================
+
 def main():
+
+    # Begin logging
+    original_stdout, log_file, log_file_path = start_logging('DenseNet-121', '../../Results/logs/')
 
     # ========================================================================
     # Configuration Settings
     # ========================================================================
 
     CONFIG = {
-        'img_dir': r"",  # add the path to the CelebA image file
-        'attr_file': r"",  # add the path to the CelebA list_attr CSV file
+        'img_dir': r"C:\\Users\\carlf\\Desktop\\COSC595 - Models and Datasets\\CelebA\\img_align_celeba\\img_align_celeba",
+        'attr_file': r"C:\\Users\\carlf\\Desktop\\COSC595 - Models and Datasets\\CelebA\\list_attr_celeba.csv",
 
-        'batch_size': 64,  # Number of images processed simultaneously
-        'num_epochs': 1,  # Total training epochs
-        'num_workers': 4,  # Parallel data loading processes
-        'train_ratio': 0.8,  # 80% of data used for training
-        'val_ratio': 0.1,  # 10% for validation, remaining 10% aside for testing
+        'batch_size': 64,
+        'num_epochs': 10,
+        'num_workers': 4,
+        'train_ratio': 0.8,
+        'val_ratio': 0.1,
 
-        'growth_rate': 16,  # Number of feature maps added per dense layer
-        'drop_rate': 0.2,  # Dropout rate within dense layers
-        'classifier_dropout': 0.5,  # Dropout rate in the final classification layer
-        'num_classes': 2,  # Binary classification: Male (1) vs Female (0)
+        'growth_rate': 16,
+        'drop_rate': 0.2,
+        'classifier_dropout': 0.5,
+        'num_classes': 2,
 
-        # Output file paths for saving results
-        'save_path': '../../Results/models/DenseNet-121_best.pth',  # Best model checkpoint
-        'log_dir': '../../Results/logs/',  # Training logs directory
+        'save_path': '../../Results/models/DenseNet-121_best.pth',
+        'log_dir': '../../Results/logs/',
+        'plots_dir': '../../Results/plots/',
     }
-
-    # ========================================================================
-    # Project Information Display
-    # ========================================================================
 
     print("\n" + "=" * 62)
     print("DenseNet-121 Gender Classification")
@@ -72,7 +72,6 @@ def main():
         gpu_memory = torch.cuda.get_device_properties(0).total_memory // 1024 ** 3
         print(f"\tGPU Name: {gpu_name}")
         print(f"\tGPU Memory: {gpu_memory} GB")
-
         torch.cuda.empty_cache()
     else:
         print("\tNote: Training on CPU will be significantly slower")
@@ -138,7 +137,7 @@ def main():
 
     total_params = sum(p.numel() for p in model.parameters())
     trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
-    model_size_mb = total_params * 4 / 1024 ** 2  # Assuming 32-bit floats
+    model_size_mb = total_params * 4 / 1024 ** 2
 
     print(f"Model Statistics:")
     print(f"\tTotal Parameters: {total_params:,}")
@@ -158,6 +157,7 @@ def main():
     try:
         os.makedirs(os.path.dirname(CONFIG['save_path']), exist_ok=True)
         os.makedirs(CONFIG['log_dir'], exist_ok=True)
+        os.makedirs(CONFIG['plots_dir'], exist_ok=True)
         print("Output directories verified/created successfully")
     except Exception as e:
         print(f"Warning: Could not create output directories: {e}")
@@ -175,11 +175,11 @@ def main():
             config=CONFIG
         )
 
-        # ====================================================================
-        # Final Results Summary and Analysis
-        # ====================================================================
-
         if results is not None:
+            # ====================================================================
+            # Final Results Summary and Analysis
+            # ====================================================================
+
             print("\n" + "=" * 62)
             print("FINAL RESULTS SUMMARY")
             print("=" * 62)
@@ -192,6 +192,9 @@ def main():
             print(f"Best Validation Accuracy: {best_val_acc:.2f}% (achieved at Epoch {best_epoch})")
             print(f"Final Test Accuracy: {test_acc:.2f}%")
             print(f"Final Test Loss: {test_loss:.4f}")
+            print(f"Final Test Precision: {results['test_precision']:.4f}")
+            print(f"Final Test Recall: {results['test_recall']:.4f}")
+            print(f"Final Test F1-Score: {results['test_f1']:.4f}")
             print(f"Model saved to: {CONFIG['save_path']}")
 
             print("\nPerformance Analysis:")
@@ -207,14 +210,20 @@ def main():
             print("=" * 62)
 
             print("DenseNet-121 training completed successfully!")
-            print("Check the Results directory for saved model and logs")
+            print("Check the Results directory for saved model, logs, and plots")
             print("=" * 62)
+
+        # Stop logging
+        stop_logging(original_stdout, log_file, log_file_path)
 
         return results
 
     except KeyboardInterrupt:
         print("\n\nTraining interrupted by user (Ctrl+C)")
         print("Any progress up to this point has been saved")
+
+        stop_logging(original_stdout, log_file, log_file_path)  # Logging
+
         return None
 
     except RuntimeError as e:
@@ -223,12 +232,18 @@ def main():
         print("- Reduce batch_size in CONFIG")
         print("- Reduce num_workers if using CPU")
         print("- Ensure sufficient GPU memory")
+
+        stop_logging(original_stdout, log_file, log_file_path)  # Logging
+
         return None
 
     except Exception as e:
         print(f"Unexpected error during training: {e}")
         print("\nError traceback:")
         traceback.print_exc()
+
+        stop_logging(original_stdout, log_file, log_file_path)  # Logging
+
         return None
 
 

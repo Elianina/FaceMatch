@@ -3,20 +3,21 @@ channels:
   - pytorch
   - nvidia
   - conda-forge
+  - defaults
+
 dependencies:
-  - python
-  - pytorch-cuda
-  - pytorch
-  - torchvision
-  - torchaudio
-  - pandas
-  - numpy
-  - scikit-learn
-  - matplotlib
-  - seaborn
-  - tqdm
-  - pillow
-  - jupyter
-  - ipykernel
-  - Kaggle API
-  - matplotlib
+  - python=3.9
+  - pytorch-cuda=11.8
+  - pytorch=2.0
+  - torchvision=0.15
+  - torchaudio=2.0
+  - pandas=2.0
+  - numpy=1.24
+  - scikit-learn=1.3
+  - matplotlib=3.7
+  - seaborn=0.12
+  - tqdm=4.65
+  - pillow=10.0
+  - jupyter=1.0
+  - ipykernel=6.15
+  - Kaggle API=1.5.12

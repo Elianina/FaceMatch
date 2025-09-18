@@ -48,7 +48,7 @@ def train_epoch(model, train_loader, optimizer, criterion, device, epoch):
     total = 0
 
     progress_bar = tqdm(train_loader, desc=f'Epoch {epoch} Training', leave=True, colour='red',
-                        bar_format='{desc}: {percentage:3.0f}%|{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}, {rate_fmt}, {postfix}]')
+                        bar_format='{desc}: {percentage:3.0f}%|{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}, {rate_fmt}{postfix}]')
 
     for images, labels in progress_bar:
         images, labels = images.to(device), labels.to(device)
@@ -91,7 +91,7 @@ def validate(model, val_loader, criterion, device):
 
     with torch.no_grad():
         progress_bar = tqdm(val_loader, desc='Validation', leave=True, colour='red',
-                            bar_format='{desc}: {percentage:3.0f}%|{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}, {rate_fmt}, {postfix}]')
+                            bar_format='{desc}: {percentage:3.0f}%|{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}, {rate_fmt}{postfix}]')
 
         for images, labels in progress_bar:
             images, labels = images.to(device), labels.to(device)
@@ -130,7 +130,7 @@ def evaluate_model(model, test_loader, criterion, device):
 
     with torch.no_grad():
         progress_bar = tqdm(test_loader, desc='Testing', leave=True, colour='red',
-                            bar_format='{desc}: {percentage:3.0f}%|{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}, {rate_fmt}, {postfix}]')
+                            bar_format='{desc}: {percentage:3.0f}%|{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}, {rate_fmt}{postfix}]')
 
         for images, labels in progress_bar:
             images, labels = images.to(device), labels.to(device)

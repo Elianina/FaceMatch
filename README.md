@@ -92,10 +92,7 @@ Below is the COSC595 Implementation project structure draft as it relates to Ass
 ```
 COSC595_Implementation/
 ├── Datasets/
-│   ├── LFW.py                  # Labelled Faces in the Wild dataset api script
-│   ├── UTKFace.py              # UTKFace dataset api script
 │   ├── CelebA.py               # CelebA dataset api script
-│   └── other/                  # Any additional Kaggle dataset api scripts
 └── Docs/
 │   └── technical_handbook.md   # Technical handbook (Assessment 2 copy for completeness)
 ├── Models/
@@ -128,11 +125,6 @@ COSC595_Implementation/
 ## References
 
 ### Datasets
-#### UTKFace
-- [UTKFace](https://www.kaggle.com/datasets/jangedoo/utkface-new)  
 
 #### CelebA
 - [CelebA](https://www.kaggle.com/datasets/jessicali9530/celeba-dataset)  
-
-#### Labelled Faces in the Wild (LFW)
-- [LFW](https://www.kaggle.com/datasets/jessicali9530/lfw-dataset)  
