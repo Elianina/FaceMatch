@@ -1,0 +1,50 @@
+/Users/yu-tinglee/Desktop/FaceMatch/venv/bin/python /Users/yu-tinglee/Desktop/FaceMatch/Models/ResNet-50/test.py
+
+Loading dataset attributes from:
+	../../datasets/CelebA/list_attr_celeba.csv
+
+Loaded Images from CSV file:
+	202599 images
+
+Overall Gender Statistics:
+	Female: 118165 (58.3% Female),
+	Male: 84434 (41.7% Male)
+
+--------------------------------------------------------------
+TRAINING Set: 162079 images (80%)
+--------------------------------------------------------------
+
+Training Gender Distribution:
+	Female: 94532 (58.3% Female),
+	Male: 67547 (41.7% Male)
+
+--------------------------------------------------------------
+VALIDATION Set: 20260 images (10%)
+--------------------------------------------------------------
+
+Validation Gender Distribution:
+	Female: 11816 (58.3% Female),
+	Male: 8444 (41.7% Male)
+
+--------------------------------------------------------------
+TESTING Set: 20260 images (10%)
+--------------------------------------------------------------
+
+Testing Gender distribution:
+	Female: 11817 (58.3% Female),
+	Male: 8443 (41.7% Male)
+
+Model evaluation completed, calculating metrics...
+Metrics calculated, generating plots...
+Generating confusion matrix...
+Generating ROC curve...
+Generating metrics summary...
+All plots generated successfully!
+
+Evaluation Summary:
+loss: 0.0000
+accuracy: 0.9797
+precision: 0.9799
+recall: 0.9783
+f1_score: 0.9791
+roc_auc: 0.9979

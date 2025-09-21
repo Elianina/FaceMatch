@@ -16,7 +16,8 @@ sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)),"..", ".
 
 from celeba_api import celeba_api_function
 from log_utils import start_logging, stop_logging
-from metrics_utils import generate_classification_report
+from metrics_utils import generate_classification_report, evaluate_model_comprehensive
+
 
 # ResNet50 Gender
 from model import ResNet50Gender
@@ -57,6 +58,7 @@ def main():
         # Output paths
         'save_path': '../../Results/models/ResNet50_best.pth',
         'log_dir': '../../Results/logs/',
+        'plot_dir': '../../Results/plots/',
         'amp': True,
     }
 
@@ -294,6 +296,9 @@ if __name__ == "__main__":
 
         print("Generating classification report...")
 
+        model = results["model"]
+        test_loader = results["test_loader"]
+
         report_path = os.path.join(CONFIG["log_dir"], "ResNet-50_classification_report.txt")
         generate_classification_report(
             y_true=results["true_labels"],
@@ -303,3 +308,14 @@ if __name__ == "__main__":
         )
 
         print(f"Classification report saved to: {report_path}")
+
+        plot_path = report_path = os.path.join(CONFIG["plot_dir"])
+        evaluate_model_comprehensive(
+            model=model,
+            test_loader=test_loader,
+            device=torch.device('cuda' if torch.cuda.is_available() else 'cpu'),
+            criterion=None,
+            model_name="ResNet50",
+            save_dir=plot_path,
+            history=results["history"]
+        )
