@@ -21,3 +21,6 @@ dependencies:
   - jupyter=1.0
   - ipykernel=6.15
   - Kaggle API=1.5.12
+  - matplotlib=3.10.6
+  - kaggle=1.7.4.5
+  - seaborn=0.13.2

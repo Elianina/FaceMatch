@@ -1,3 +1,13 @@
+"""
+References:
+    PyTorch Team. (n.d.). TorchVision Models. PyTorch. Retrieved September 01, 2025, from https://pytorch.org/vision/stable/models.html
+    OpenGenus. (n.d.). Designing ResNet50 in PyTorch. OpenGenus IQ. Retrieved September 21, 2025, from https://iq.opengenus.org/designing-resnet50-in-pytorch/
+    Nandi, A., & Karmakar, S. (2021). Age and Gender Prediction using Deep CNNs and Transfer Learning [Preprint]. arXiv. https://doi.org/10.48550/arXiv.2110.12633
+    Rabbi, M. R. (2022). Gender classification | PyTorch ResNet50. Kaggle. https://www.kaggle.com/code/rabbi2k3/gender-classification-pytorch-resnet-50
+"""
+
+
+
 # ============================================================================
 # Imports and Dependencies
 # ============================================================================

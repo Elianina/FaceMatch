@@ -12,7 +12,11 @@ import torch
 import traceback
 import matplotlib.pyplot as plt
 
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)),"..", "..", "utils"))
+
+from celeba_api import celeba_api_function
+from log_utils import start_logging, stop_logging
+from metrics_utils import generate_classification_report
 
 # ResNet50 Gender
 from model import ResNet50Gender
@@ -21,16 +25,23 @@ from trainer import train_model
 
 warnings.filterwarnings('ignore')
 
-
 def main():
+    # ========================================================================
+    # Logging Setup
+    # ========================================================================
+    original_stdout, log_file, log_file_path = start_logging(model_name="ResNet-50", log_dir="../../Results/logs/")
 
     # ========================================================================
     # Configuration Settings
     # ========================================================================
+    if not os.path.exists("../../datasets/CelebA/img_align_celeba"):
+        celeba_api_function(dest_dir="../../datasets/CelebA") # path to save CelebA dataset
+    else:
+        print("CelebA dataset already exists. Skipping download.\n")
 
     CONFIG = {
-        'img_dir': r"",        # add the path to the CelebA image folder
-        'attr_file': r"",      # add the path to the CelebA list_attr CSV file
+        'img_dir': r"../../datasets/CelebA/img_align_celeba/img_align_celeba",  # path to open the CelebA image folder
+        'attr_file': r"../../datasets/CelebA/list_attr_celeba.csv",             # path to read CelebA list_attr.csv file
 
         'batch_size': 32, # 64, 32, 16
         'num_epochs': 40,
@@ -236,6 +247,9 @@ def main():
         traceback.print_exc()
         return None
 
+    finally:
+        stop_logging(original_stdout, log_file, log_file_path)
+
 
 if __name__ == "__main__":
     print("Starting ResNet-50 Gender Classification Training")
@@ -262,7 +276,8 @@ if __name__ == "__main__":
         plt.ylabel("Loss")
         plt.title("ResNet-50 Training and Validation Loss")
         plt.legend()
-        plt.savefig("ResNet-50_loss_curve.png")  # 存檔
+        os.makedirs("../Results/plots/", exist_ok=True)
+        plt.savefig("../Results/plots/ResNet-50_loss_curve.png")
         plt.show()
 
         # Accuracy Curve
@@ -273,5 +288,18 @@ if __name__ == "__main__":
         plt.ylabel("Accuracy (%)")
         plt.title("ResNet-50 Training and Validation Accuracy")
         plt.legend()
-        plt.savefig("ResNet-50_acc_curve.png")
+        os.makedirs("../Results/plots/", exist_ok=True)
+        plt.savefig("../Results/plots/ResNet-50_acc_curve.png")
         plt.show()
+
+        print("Generating classification report...")
+
+        report_path = os.path.join(CONFIG["log_dir"], "ResNet-50_classification_report.txt")
+        generate_classification_report(
+            y_true=results["true_labels"],
+            y_pred=results["predictions"],
+            class_names=["Female", "Male"],
+            save_path=report_path
+        )
+
+        print(f"Classification report saved to: {report_path}")
