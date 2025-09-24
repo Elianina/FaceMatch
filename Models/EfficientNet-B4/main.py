@@ -1,22 +1,19 @@
 """
-EfficientNet-B4 Gender Classification - Main Entry Point
+EfficientNet-B4 Gender Classification - Main Execution
 
-This implementation is based on the EfficientNet architecture for efficient 
+This implementation is based on the EfficientNet architecture for efficient
 convolutional neural networks with compound scaling.
 
 References:
-- Tan, M., & Le, Q. (2019). EfficientNet: Rethinking Model Scaling for 
+- Tan, M., & Le, Q. (2019). EfficientNet: Rethinking Model Scaling for
   Convolutional Neural Networks. International Conference on Machine Learning (ICML).
 - Official EfficientNet paper: https://arxiv.org/abs/1905.11946
-- EfficientNet TensorFlow implementation: 
+- EfficientNet TensorFlow implementation:
   https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet
-- PyTorch EfficientNet implementation: 
+- PyTorch EfficientNet implementation:
   https://github.com/lukemelas/EfficientNet-PyTorch
-- Ross Wightman's timm library: 
+- Ross Wightman's timm library:
   https://github.com/rwightman/pytorch-image-models
-
-Usage:
-    `python main.py`
 """
 
 import os
@@ -25,27 +22,30 @@ import warnings
 import torch
 import traceback
 
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
+# Import from the files created in previous cells
 from model import EfficientNetB4Gender
 from data_loader import create_data_loaders
 from trainer import train_model
+from log_utils import start_logging, stop_logging
 
 warnings.filterwarnings('ignore')
 
 
 def main():
 
+    # Begin logging
+    original_stdout, log_file, log_file_path = start_logging('EfficientNet-B4', '/home/localadmin/jupyter/outputs/')
+
     # ========================================================================
-    # Configuration Settings - LOCAL SERVER PATHS
+    # Configuration Settings
     # ========================================================================
 
     CONFIG = {
-        'img_dir': '/home/localadmin/jupyter/dataset/dataset_c',                        # Path to folder with all images
-        'attr_file': '/home/localadmin/jupyter/dataset/dataset_c/list_attr_celeba.csv', # Path to CSV file
+        'img_dir': '/home/localadmin/jupyter/dataset/dataset_c',  # Path to folder with all images
+        'attr_file': '/home/localadmin/jupyter/dataset/dataset_c/list_attr_celeba.csv',  # Path to CSV file
 
         'batch_size': 16,  # Conservative batch size for EfficientNet-B4
-        'num_epochs': 30,  # Number of training epochs
+        'num_epochs': 40,  # Number of training epochs
         'num_workers': 4,  # Parallel data loading processes
         'train_ratio': 0.8,  # 80% of data used for training
         'val_ratio': 0.1,  # 10% for validation, remaining 10% aside for testing
@@ -57,6 +57,7 @@ def main():
         # Output file paths for saving results (local server paths)
         'save_path': '/home/localadmin/jupyter/EfficientNet-B4_best.pth',  # Best model checkpoint
         'log_dir': '/home/localadmin/jupyter/outputs/',  # Training logs directory
+        'plots_dir': '/home/localadmin/jupyter/outputs/',  # Plots and visualizations directory
     }
 
     # ========================================================================
@@ -86,8 +87,7 @@ def main():
         print(f"\tGPU Name: {gpu_name}")
         print(f"\tGPU Memory: {gpu_memory} GB")
 
-        # Skip cache clearing to avoid memory errors
-        # torch.cuda.empty_cache()  # Commented out to avoid CUDA errors
+        torch.cuda.empty_cache()
     else:
         print("\tNote: Training on CPU will be significantly slower")
 
@@ -117,12 +117,10 @@ def main():
         print("\nPlease update the file paths in CONFIG section:")
         print(f"   - img_dir: {CONFIG['img_dir']}")
         print(f"   - attr_file: {CONFIG['attr_file']}")
-        print("\nEnsure the dataset is in the correct location.")
+        print("\nEnsure the dataset is uploaded and paths are correct for local server.")
         print("Expected structure:")
-        print("dataset_c/")
-        print("├── 000001.jpg")
-        print("├── 000002.jpg")
-        print("├── ... (all images)")
+        print("/home/localadmin/jupyter/dataset/dataset_c/")
+        print("├── [all image files directly here]")
         print("└── list_attr_celeba.csv")
         return None
 
@@ -130,7 +128,7 @@ def main():
         print(f"Error loading dataset: {e}")
         print("This could be due to:")
         print("- Incorrect file paths")
-        print("- Missing CSV file (list_attr_celeba.csv)")
+        print("- Missing CSV file")
         print("- CSV file format issues")
         print("- Insufficient memory")
         return None
@@ -178,6 +176,7 @@ def main():
     try:
         os.makedirs(os.path.dirname(CONFIG['save_path']), exist_ok=True)
         os.makedirs(CONFIG['log_dir'], exist_ok=True)
+        os.makedirs(CONFIG['plots_dir'], exist_ok=True)
         print("Output directories verified/created successfully")
     except Exception as e:
         print(f"Warning: Could not create output directories: {e}")
@@ -212,17 +211,20 @@ def main():
             print(f"Best Validation Accuracy: {best_val_acc:.2f}% (achieved at Epoch {best_epoch})")
             print(f"Final Test Accuracy: {test_acc:.2f}%")
             print(f"Final Test Loss: {test_loss:.4f}")
+            print(f"Final Test Precision: {results['test_precision']:.4f}")
+            print(f"Final Test Recall: {results['test_recall']:.4f}")
+            print(f"Final Test F1-Score: {results['test_f1']:.4f}")
             print(f"Model saved to: {CONFIG['save_path']}")
 
             print("\nPerformance Analysis:")
             if test_acc >= 95.0:
-                print("Excellent performance! Model achieved SOTA accuracy.")
+                print("Excellent performance! EfficientNet-B4 achieved SOTA accuracy.")
             elif test_acc >= 90.0:
-                print("Good performance! Model is working well for binary classification.")
+                print("Good performance! EfficientNet-B4 is working well for binary classification.")
             elif test_acc >= 85.0:
                 print("Moderate performance. Consider further tuning.")
             else:
-                print("Poor performance... Model may need some significant adjustments.")
+                print("Poor performance... EfficientNet-B4 may need some significant adjustments.")
 
             print("=" * 62)
 
@@ -230,11 +232,17 @@ def main():
             print("Check the saved model at:", CONFIG['save_path'])
             print("=" * 62)
 
+        # Stop logging
+        stop_logging(original_stdout, log_file, log_file_path)
+
         return results
 
     except KeyboardInterrupt:
         print("\n\nTraining interrupted by user (Ctrl+C)")
         print("Any progress up to this point has been saved")
+
+        stop_logging(original_stdout, log_file, log_file_path)  # Logging
+
         return None
 
     except RuntimeError as e:
@@ -243,19 +251,23 @@ def main():
         print("\nPossible solutions:")
         if "out of memory" in error_msg.lower():
             print("- Reduce batch_size in CONFIG (try 8 or 4)")
-            print("- Restart Python kernel to clear GPU memory")
-            print("- Check GPU memory usage with 'nvidia-smi'")
+            print("- Restart runtime to clear GPU memory")
         else:
             print("- Reduce batch_size in CONFIG")
-            print("- Restart the Python kernel")
-            print("- Check system resources")
+            print("- Restart the runtime")
+            print("- Check GPU allocation")
+
+        stop_logging(original_stdout, log_file, log_file_path)  # Logging
+
         return None
 
     except Exception as e:
         print(f"Unexpected error during training: {e}")
         print("\nError traceback:")
         traceback.print_exc()
-        print("\nTry restarting and running again.")
+
+        stop_logging(original_stdout, log_file, log_file_path)  # Logging
+
         return None
 
 

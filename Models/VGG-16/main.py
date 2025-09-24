@@ -1,6 +1,5 @@
-#!/usr/bin/env python3
 """
-VGG-16 Gender Classification - Main Execution Script
+VGG-16 Gender Classification - Main Execution
 
 This implementation uses the classic VGG-16 architecture for gender classification
 with batch normalization for improved training stability.
@@ -12,10 +11,6 @@ References:
   https://github.com/rasbt/deeplearning-models/blob/master/pytorch_ipynb/cnn/cnn-vgg16-celeba.ipynb
 - DigitalOcean VGG16 PyTorch tutorial:
   https://www.digitalocean.com/community/tutorials/vgg-from-scratch-pytorch
-
-Author: [Your Name]
-Date: [Current Date]
-Project: COSC595 Information Technology Project: Implementation
 """
 
 import os
@@ -24,25 +19,17 @@ import warnings
 import torch
 import traceback
 
-# Import from the project modules
+# Import from the files created in previous cells
 from model import VGG16Gender
 from data_loader import create_data_loaders
 from trainer import train_model
 from log_utils import start_logging, stop_logging
 
-# Suppress warnings for cleaner output
 warnings.filterwarnings('ignore')
 
 
 def main():
-    """
-    Main function to execute VGG-16 gender classification training.
-    
-    Returns:
-        dict: Training results containing accuracy metrics and model paths,
-              or None if training fails.
-    """
-    
+
     # Begin logging
     original_stdout, log_file, log_file_path = start_logging('VGG-16', '/home/localadmin/jupyter/outputs/')
 
@@ -51,20 +38,15 @@ def main():
     # ========================================================================
 
     CONFIG = {
-        # Dataset paths
         'img_dir': '/home/localadmin/jupyter/dataset/dataset_c',  # Path to folder with all images
         'attr_file': '/home/localadmin/jupyter/dataset/dataset_c/list_attr_celeba.csv',  # Path to CSV file
 
-        # Training hyperparameters
         'batch_size': 16,  # Conservative batch size for VGG-16
         'num_epochs': 40,  # Number of training epochs
         'num_workers': 4,  # Parallel data loading processes
-        
-        # Data split ratios
         'train_ratio': 0.8,  # 80% of data used for training
         'val_ratio': 0.1,  # 10% for validation, remaining 10% aside for testing
 
-        # Model parameters
         'classifier_dropout': 0.5,  # Dropout rate in the final classification layer
         'num_classes': 2,  # Binary classification: Male (1) vs Female (0)
 
@@ -100,8 +82,7 @@ def main():
         gpu_memory = torch.cuda.get_device_properties(0).total_memory // 1024 ** 3
         print(f"\tGPU Name: {gpu_name}")
         print(f"\tGPU Memory: {gpu_memory} GB")
-        
-        # Clear GPU cache
+
         torch.cuda.empty_cache()
     else:
         print("\tNote: Training on CPU will be significantly slower")
@@ -137,9 +118,6 @@ def main():
         print("/home/localadmin/jupyter/dataset/dataset_c/")
         print("├── [all image files directly here]")
         print("└── list_attr_celeba.csv")
-        
-        # Stop logging before returning
-        stop_logging(original_stdout, log_file, log_file_path)
         return None
 
     except Exception as e:
@@ -149,9 +127,6 @@ def main():
         print("- Missing CSV file")
         print("- CSV file format issues")
         print("- Insufficient memory")
-        
-        # Stop logging before returning
-        stop_logging(original_stdout, log_file, log_file_path)
         return None
 
     # ========================================================================
@@ -174,7 +149,6 @@ def main():
         num_classes=CONFIG['num_classes']
     ).to(device)
 
-    # Calculate model statistics
     total_params = sum(p.numel() for p in model.parameters())
     trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
     model_size_mb = total_params * 4 / 1024 ** 2  # Assuming 32-bit floats
@@ -194,7 +168,6 @@ def main():
     print("Starting Training Phase")
     print("=" * 62 + "\n")
 
-    # Create output directories
     try:
         os.makedirs(os.path.dirname(CONFIG['save_path']), exist_ok=True)
         os.makedirs(CONFIG['log_dir'], exist_ok=True)
@@ -247,22 +220,22 @@ def main():
                 print("Performance could be improved. Consider longer training or hyperparameter tuning.")
 
             print("=" * 62)
+
             print("VGG-16 training completed successfully!")
             print("Check the saved model at:", CONFIG['save_path'])
             print("=" * 62)
 
         # Stop logging
         stop_logging(original_stdout, log_file, log_file_path)
-        
+
         return results
 
     except KeyboardInterrupt:
         print("\n\nTraining interrupted by user (Ctrl+C)")
         print("Any progress up to this point has been saved")
-        
-        # Stop logging
-        stop_logging(original_stdout, log_file, log_file_path)
-        
+
+        stop_logging(original_stdout, log_file, log_file_path)  # Logging
+
         return None
 
     except RuntimeError as e:
@@ -276,9 +249,8 @@ def main():
             print("- Reduce batch_size in CONFIG")
             print("- Check GPU allocation")
 
-        # Stop logging
-        stop_logging(original_stdout, log_file, log_file_path)
-        
+        stop_logging(original_stdout, log_file, log_file_path)  # Logging
+
         return None
 
     except Exception as e:
@@ -286,57 +258,9 @@ def main():
         print("\nError traceback:")
         traceback.print_exc()
 
-        # Stop logging
-        stop_logging(original_stdout, log_file, log_file_path)
-        
+        stop_logging(original_stdout, log_file, log_file_path)  # Logging
+
         return None
-
-
-def validate_environment():
-    """
-    Validate that required modules and dependencies are available.
-    
-    Returns:
-        bool: True if environment is valid, False otherwise.
-    """
-    
-    required_modules = ['model', 'data_loader', 'trainer', 'log_utils']
-    missing_modules = []
-    
-    for module in required_modules:
-        try:
-            __import__(module)
-        except ImportError:
-            missing_modules.append(module)
-    
-    if missing_modules:
-        print(f"Error: Missing required modules: {missing_modules}")
-        print("Ensure all project files are in the same directory:")
-        print("- model.py")
-        print("- data_loader.py")
-        print("- trainer.py")
-        print("- log_utils.py")
-        return False
-    
-    return True
-
-
-def print_usage():
-    """Print usage instructions for the script."""
-    
-    print("VGG-16 Gender Classification Training Script")
-    print("=" * 50)
-    print("Usage: python main.py")
-    print("\nBefore running:")
-    print("1. Ensure dataset is properly organized")
-    print("2. Update CONFIG paths if necessary")
-    print("3. Verify all required modules are present")
-    print("4. Check GPU availability (recommended)")
-    print("\nRequired files:")
-    print("- model.py (VGG-16 model definition)")
-    print("- data_loader.py (dataset loading utilities)")
-    print("- trainer.py (training loop implementation)")
-    print("- log_utils.py (logging utilities)")
 
 
 # ========================================================================
@@ -346,26 +270,14 @@ def print_usage():
 if __name__ == "__main__":
     print("Starting VGG-16 Gender Classification Training")
     print("=" * 62)
-    
-    # Validate environment before proceeding
-    if not validate_environment():
-        print("\nEnvironment validation failed. Please check missing dependencies.")
-        sys.exit(1)
-    
-    # Execute main training function
+
     results = main()
-    
-    # Print final status
+
     if results is not None:
         print(f"\nTraining session completed with {results['test_acc']:.2f}% test accuracy")
-        print("=" * 62)
-        print("SUCCESS: VGG-16 training completed successfully!")
     else:
         print("\nTraining session failed or was interrupted")
         print("Check the error messages above and try again.")
-        print("=" * 62)
-        print("FAILED: VGG-16 training did not complete successfully")
-        sys.exit(1)
 
-    print("Script execution finished.")
     print("=" * 62)
+    print("Script execution finished.")
