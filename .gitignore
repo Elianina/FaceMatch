@@ -27,7 +27,7 @@ Thumbs.db
 *.h5
 *.weights
 
-# Datasets (too large for git)
+# Datasets (too large for git/IDEs)
 Datasets/CelebA/
 Datasets/LFW/
 Datasets/YLFW/
@@ -36,14 +36,6 @@ Datasets/*.tar.gz
 Datasets/**/*.jpg
 Datasets/**/*.png
 Datasets/**/*.csv
-!Datasets/README.md
-!Datasets/*_api.py
-
-# Results and Logs
-Results/models/*.pth
-Results/models/*.pt
-Results/logs/*.log
-Results/logs/runs/
 
 # Jupyter
 .ipynb_checkpoints/

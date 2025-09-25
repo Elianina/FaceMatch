@@ -153,8 +153,7 @@ class DenseNet121Gender(nn.Module):
                  block_config=(6, 12, 24, 16),
                  num_init_features=64,
                  bn_size=4,
-                 drop_rate=0.2,
-                 classifier_dropout=0.5,
+                 drop_rate=0.2,  # Original sourcecode is 0
                  num_classes=2,
                  memory_efficient=False):
 
@@ -190,26 +189,19 @@ class DenseNet121Gender(nn.Module):
                 memory_efficient=memory_efficient
             )
             self.features.add_module('denseblock%d' % (i + 1), block)
-
             num_features = num_features + num_layers * growth_rate
-
             if i != len(block_config) - 1:
-                transition_output_features = num_features // 2
-
+                transition_output_features = num_features // 2  # not original sourcecode
                 trans = _Transition(
                     num_input_features=num_features,
                     num_output_features=transition_output_features
                 )
                 self.features.add_module('transition%d' % (i + 1), trans)
-
                 num_features = transition_output_features
 
         self.features.add_module('norm5', nn.BatchNorm2d(num_features))
 
-        self.classifier = nn.Sequential(
-            nn.Dropout(p=classifier_dropout),
-            nn.Linear(num_features, num_classes)
-        )
+        self.classifier = nn.Linear(num_features, num_classes)
 
         for m in self.modules():
             if isinstance(m, nn.Conv2d):

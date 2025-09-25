@@ -1,17 +1,19 @@
-# COSC595 Implementation: FaceMatch AI
-## Facial Recognition System Using Deep Learning
+# COSC595 Implementation: A Comparison of Four Deep Learning Architectures for Gendered Facial Recognition   
 
-**University of New England**  
+---
+
+**University of New England (UNE)**   
 **Course:** COSC595 Information Technology Project: Implementation  
 **Team:** Carl Fokstuen, YuTing Lee, Mark Malady, Nayani Samaranayake, Vishal Cheroor Ravi  
 **Supervisors:** Prof. Raymond Chiong, Dr. Farshid Hajati
-
-### Project Overview
-This project implements and evaluates multiple deep learning architectures for gendered facial recognition, building upon our 
-COSC594 literature review of AI-driven facial phenotyping tools. We now focus on VGG-16 as our primary model with further 
-and potential expansion to EfficientNet-B4, ResNet-50, and DenseNet-121 models.
-
 ---
+## Project Overview
+This project implements and evaluates multiple deep learning architectures for gendered facial recognition for comparative purposes. 
+These models include 1. VGG-16, 2. EfficientNet-B4, 3. ResNet-50, and 4. DenseNet-121. The models are trained on the CelebA dataset, 
+which contains 202,599 celebrity face images from 10,177 individuals. The dataset contains 40 attributes, including 5 facial features, 
+age, gender, and race. The attributes are used to train the models to predict the gender of a celebrity from a given image.
+
+--- 
 
 ## Project Installation
 
@@ -19,8 +21,11 @@ and potential expansion to EfficientNet-B4, ResNet-50, and DenseNet-121 models.
 - Anaconda or Miniconda installed
 - CUDA-capable GPU (recommended)
 - 16GB+ RAM for training
-- if you do not have celebA dataset:
+- if you do not have celebA dataset available locally, you can download it from Kaggle:
+  - Download the CelebA dataset from Kaggle: https://www.kaggle.com/datasets/jessicali9530/celeba-dataset
   - Prepare Kaggle API credentials, see: https://www.kaggle.com/docs/api
+
+
 
 ### Dependencies
   - python
@@ -137,6 +142,10 @@ COSC595_Implementation/
 ---
 
 ## References
+
+Huang, G., Liu, Z., Van Der Maaten, L., & Weinberger, K. Q. (2018). Densely Connected Convolutional Networks. arXiv:1608.06993v5.   
+Liu, Z. (N.D.) DenseNet. https://github.com/liuzhuang13/DenseNet   
+Li, J. (2018). CelebFaces Attributes (CelebA) Dataset. Kaggle. https://www.kaggle.com/datasets/jessicali9530/celeba-dataset   
 
 ### Datasets
 
