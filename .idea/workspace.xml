@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="53a1ac4d-c110-4b62-948e-d153ef0e1e4c" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/FaceMatch/utils/image_eval_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datasets/CelebA_api.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/Technical_Handbook.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FaceMatch/Docs/Technical_Handbook.md" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FaceMatch/Models/DenseNet-121/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/utils/data_loader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FaceMatch/Models/DenseNet-121/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/Models/DenseNet-121/main.py" afterDir="false" />
@@ -42,36 +39,6 @@
       <change beforePath="$PROJECT_DIR$/FaceMatch/Results/plots/ResNet50_metrics_summary.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FaceMatch/Results/plots/ResNet50_roc_curve.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FaceMatch/utils/model_comparison_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/utils/model_comparison_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DenseNet-121/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DenseNet-121/data_loader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DenseNet-121/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DenseNet-121/model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DenseNet-121/trainer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/EfficientNet-B4/data_loader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/EfficientNet-B4/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/EfficientNet-B4/model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/EfficientNet-B4/trainer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/ResNet-50/data_loader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/ResNet-50/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/ResNet-50/model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/ResNet-50/trainer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/VGG-16-BN/data_loader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/VGG-16-BN/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/VGG-16-BN/model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/VGG-16-BN/trainer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/VGG-16/data_loader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/VGG-16/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/VGG-16/model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/VGG-16/trainer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/logs/EfficientNet-B4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/logs/ResNet-50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/logs/VGG-16-BN.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/logs/VGG-16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/models/DenseNet-121_best.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/plots/ResNet-50_acc_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/plots/ResNet-50_loss_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment.yml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +139,7 @@
       <workItem from="1758932785019" duration="668000" />
       <workItem from="1759067189731" duration="945000" />
       <workItem from="1759107514748" duration="54000" />
-      <workItem from="1759215256258" duration="37952000" />
+      <workItem from="1759215256258" duration="38446000" />
     </task>
     <servers />
   </component>
