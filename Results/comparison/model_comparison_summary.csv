@@ -1,4 +1,0 @@
-Model,Best Val Accuracy (%),Test Accuracy (%),Test Loss
-VGG-16,98.06,97.87,0.0603
-EfficientNet-B4,97.97,97.81,0.0846
-ResNet-50,98.13,97.94,0.0577
