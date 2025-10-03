@@ -204,7 +204,7 @@ class DenseNet121Gender(nn.Module):
                  block_config=(6, 12, 24, 16),
                  num_init_features=64,
                  bn_size=4,
-                 drop_rate=0.2,  # Original sourcecode is 0
+                 drop_rate=0.2,
                  num_classes=2,
                  memory_efficient=False):
 
@@ -242,7 +242,7 @@ class DenseNet121Gender(nn.Module):
             self.features.add_module('denseblock%d' % (i + 1), block)
             num_features = num_features + num_layers * growth_rate
             if i != len(block_config) - 1:
-                transition_output_features = num_features // 2  # not original sourcecode
+                transition_output_features = num_features // 2
                 trans = _Transition(
                     num_input_features=num_features,
                     num_output_features=transition_output_features
