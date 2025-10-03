@@ -4,10 +4,10 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.11
+  - python
   - pytorch
   - torchvision
-  - pytorch-cuda=12.1
+  - pytorch-cuda
   - numpy
   - pandas
   - scikit-learn
