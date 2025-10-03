@@ -5,40 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53a1ac4d-c110-4b62-948e-d153ef0e1e4c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/FaceMatch/utils/image_eval_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Docs/Technical_Handbook.md" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Models/DenseNet-121/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/utils/data_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Models/DenseNet-121/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/Models/DenseNet-121/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Models/DenseNet-121/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/Models/DenseNet-121/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Models/DenseNet-121/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/Models/DenseNet-121/trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Models/EfficientNet-B4/data_loader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Models/EfficientNet-B4/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/Models/EfficientNet-B4/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Models/EfficientNet-B4/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/Models/EfficientNet-B4/trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Models/ResNet-50/data_loader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Models/ResNet-50/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/Models/ResNet-50/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Models/ResNet-50/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/Models/ResNet-50/trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Models/VGG-16/data_loader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Models/VGG-16/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/Models/VGG-16/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Models/VGG-16/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/Models/VGG-16/trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Results/comparison/comparison_validation_accuracy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Results/comparison/model_comparison_summary.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Results/logs/DenseNet-121_training_log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Results/logs/EfficientNet-B4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Results/logs/ResNet-50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Results/logs/ResNet-50_classification_report.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Results/logs/VGG-16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Results/models/info.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Results/plots/DenseNet-121_confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Results/plots/DenseNet-121_metrics_summary.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Results/plots/DenseNet-121_roc_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Results/plots/DenseNet-121_training_curves.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Results/plots/ResNet-50_acc_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Results/plots/ResNet-50_loss_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Results/plots/ResNet50_confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Results/plots/ResNet50_metrics_summary.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/Results/plots/ResNet50_roc_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceMatch/utils/model_comparison_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/utils/model_comparison_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceMatch/FaceMatch/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/FaceMatch/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceMatch/FaceMatch/Models/ResNet-50/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceMatch/FaceMatch/Models/ResNet-50/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceMatch/FaceMatch/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceMatch/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +24,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/FaceMatch" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -104,6 +75,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\carlf\Desktop\COSC595_Implementation" />
       <recent name="C:\Users\carlf\Desktop\COSC595_Implementation\FaceMatch\utils" />
     </key>
   </component>
@@ -150,7 +122,7 @@
     <SUITE FILE_PATH="coverage/COSC595_Implementation$celeba_api.coverage" NAME="celeba_api Coverage Results" MODIFIED="1758518719988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FaceMatch/utils" />
     <SUITE FILE_PATH="coverage/COSC595_Implementation$model.coverage" NAME="model Coverage Results" MODIFIED="1758086901224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FaceMatch/Models/DenseNet-121" />
     <SUITE FILE_PATH="coverage/COSC595_Implementation$trainer.coverage" NAME="trainer Coverage Results" MODIFIED="1758116962156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FaceMatch/Models/DenseNet-121" />
-    <SUITE FILE_PATH="coverage/COSC595_Implementation$main.coverage" NAME="main Coverage Results" MODIFIED="1759376045842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FaceMatch/Models/DenseNet-121" />
+    <SUITE FILE_PATH="coverage/COSC595_Implementation$main.coverage" NAME="main Coverage Results" MODIFIED="1759449422150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FaceMatch/Models/EfficientNet-B4" />
     <SUITE FILE_PATH="coverage/COSC595_Implementation$gpu_check.coverage" NAME="gpu_check Coverage Results" MODIFIED="1757643848835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FaceMatch/Models/DenseNet-121" />
   </component>
 </project>

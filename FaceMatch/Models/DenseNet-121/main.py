@@ -44,19 +44,8 @@ from FaceMatch.utils.data_loader import create_data_loaders
 from FaceMatch.utils.image_eval_utils import image_eval_utils
 from FaceMatch.utils.log_utils import start_logging, stop_logging
 
-
 # Suppress any non-critical warnings
 warnings.filterwarnings('ignore')
-
-
-def load_trained_model(model_class, model_path, device, **model_kwargs):
-    """Generic function to load any trained model"""
-    model = model_class(**model_kwargs).to(device)
-    checkpoint = torch.load(model_path, map_location=device)
-    model.load_state_dict(checkpoint['model_state_dict'])
-    model.eval()
-    return model
-
 
 
 # ============================================================================

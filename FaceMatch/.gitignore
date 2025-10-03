@@ -13,7 +13,7 @@ env/
 
 # IDE
 .vscode/
-.idea/
+.idea
 *.swp
 
 # OS

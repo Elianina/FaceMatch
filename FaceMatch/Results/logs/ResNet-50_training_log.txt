@@ -1,0 +1,808 @@
+
+==============================================================
+ResNet-50 Gender Classification
+==============================================================
+
+Project: COSC595 Information Technology Project: Implementation
+Model: ResNet-50
+Task: Binary Gender Classification (Male/Female)
+
+==============================================================
+
+Device Configuration:
+	Utilising Device: CUDA
+	GPU Name: NVIDIA GeForce RTX 3080 Ti
+	GPU Memory: 11 GB
+
+
+---------------
+Loading Dataset
+---------------
+
+Loading dataset attributes from:
+	C:\\Users\\carlf\\Desktop\\COSC595 - Models and Datasets\\CelebA\\list_attr_celeba.csv
+
+Loaded Images from CSV file:
+	202599 images
+
+Overall Gender Statistics:
+	Female: 118165 (58.3% Female),
+	Male: 84434 (41.7% Male)
+
+--------------------------------------------------------------
+TRAINING Set: 162079 images (80%)
+--------------------------------------------------------------
+
+Training Gender Distribution:
+	Female: 94532 (58.3% Female),
+	Male: 67547 (41.7% Male)
+
+--------------------------------------------------------------
+VALIDATION Set: 20260 images (10%)
+--------------------------------------------------------------
+
+Validation Gender Distribution:
+	Female: 11816 (58.3% Female),
+	Male: 8444 (41.7% Male)
+
+--------------------------------------------------------------
+TESTING Set: 20260 images (10%)
+--------------------------------------------------------------
+
+Testing Gender distribution:
+	Female: 11817 (58.3% Female),
+	Male: 8443 (41.7% Male)
+
+Dataset loaded successfully!
+
+==============================================================
+Initialising ResNet-50 Model
+==============================================================
+
+Model Configuration:
+	Classifier Dropout: 0.5
+	Block Dropout: 0.0
+	Number of Classes: 2 (Male/Female)
+
+Model Statistics:
+	Total Parameters: 23,516,226
+	Trainable Parameters: 23,516,226
+	Model Size: 89.7 MB
+	Memory Footprint: ~179 MB (including gradients)
+
+==============================================================
+Starting Training Phase
+==============================================================
+
+Output directories verified/created successfully
+
+Starting training for 40 epochs
+
+--------------------------------------------------------------
+Epoch 1/40
+--------------------------------------------------------------
+
+
+
+Epoch 1 Results:
+	Training Loss: 0.2153, Training Accuracy: 90.76%
+	Validation Loss: 0.1321, Validation Accuracy: 94.75%
+	Precision: 0.9439, Recall: 0.9503, F1: 0.9465
+	Learning Rate: 0.001000
+
+
+Validation Accuracy: 94.75%   |   [92mThe new best model - Saved![0m
+
+
+--------------------------------------------------------------
+Epoch 2/40
+--------------------------------------------------------------
+
+
+
+Epoch 2 Results:
+	Training Loss (TL): 0.1276, Training Accuracy (TA): 95.09%
+	Validation Loss (VL): 0.1142, Validation Accuracy (VA): 95.45%
+	Precision: 0.9575, Recall: 0.9492, F1: 0.9528
+	Learning Rate (LR): 0.000999
+
+
+Validation Accuracy: 95.45%   |   [92mThe new best model - Saved![0m
+
+
+--------------------------------------------------------------
+Epoch 3/40
+--------------------------------------------------------------
+
+
+
+Epoch 3 Results:
+	Training Loss (TL): 0.1067, Training Accuracy (TA): 95.92%
+	Validation Loss (VL): 0.1017, Validation Accuracy (VA): 96.12%
+	Precision: 0.9582, Recall: 0.9630, F1: 0.9603
+	Learning Rate (LR): 0.000998
+
+
+Validation Accuracy: 96.12%   |   [92mThe new best model - Saved![0m
+
+
+--------------------------------------------------------------
+Epoch 4/40
+--------------------------------------------------------------
+
+
+
+Epoch 4 Results:
+	Training Loss (TL): 0.0966, Training Accuracy (TA): 96.33%
+	Validation Loss (VL): 0.0892, Validation Accuracy (VA): 96.59%
+	Precision: 0.9658, Recall: 0.9640, F1: 0.9649
+	Learning Rate (LR): 0.000996
+
+
+Validation Accuracy: 96.59%   |   [92mThe new best model - Saved![0m
+
+
+--------------------------------------------------------------
+Epoch 5/40
+--------------------------------------------------------------
+
+
+
+Epoch 5 Results:
+	Training Loss (TL): 0.0905, Training Accuracy (TA): 96.60%
+	Validation Loss (VL): 0.0797, Validation Accuracy (VA): 96.97%
+	Precision: 0.9677, Recall: 0.9704, F1: 0.9690
+	Learning Rate (LR): 0.000994
+
+
+Validation Accuracy: 96.97%   |   [92mThe new best model - Saved![0m
+
+
+--------------------------------------------------------------
+Epoch 6/40
+--------------------------------------------------------------
+
+
+
+Epoch 6 Results:
+	Training Loss (TL): 0.0876, Training Accuracy (TA): 96.71%
+	Validation Loss (VL): 0.0945, Validation Accuracy (VA): 96.41%
+	Precision: 0.9606, Recall: 0.9676, F1: 0.9634
+	Learning Rate (LR): 0.000991
+
+
+Validation Accuracy: 96.41%   |   
+
+
+--------------------------------------------------------------
+Epoch 7/40
+--------------------------------------------------------------
+
+
+
+Epoch 7 Results:
+	Training Loss (TL): 0.0829, Training Accuracy (TA): 96.90%
+	Validation Loss (VL): 0.0723, Validation Accuracy (VA): 97.33%
+	Precision: 0.9721, Recall: 0.9730, F1: 0.9726
+	Learning Rate (LR): 0.000988
+
+
+Validation Accuracy: 97.33%   |   [92mThe new best model - Saved![0m
+
+
+--------------------------------------------------------------
+Epoch 8/40
+--------------------------------------------------------------
+
+
+
+Epoch 8 Results:
+	Training Loss (TL): 0.0797, Training Accuracy (TA): 97.05%
+	Validation Loss (VL): 0.0709, Validation Accuracy (VA): 97.47%
+	Precision: 0.9746, Recall: 0.9734, F1: 0.9740
+	Learning Rate (LR): 0.000984
+
+
+Validation Accuracy: 97.47%   |   [92mThe new best model - Saved![0m
+
+
+--------------------------------------------------------------
+Epoch 9/40
+--------------------------------------------------------------
+
+
+
+Epoch 9 Results:
+	Training Loss (TL): 0.0781, Training Accuracy (TA): 97.12%
+	Validation Loss (VL): 0.0653, Validation Accuracy (VA): 97.50%
+	Precision: 0.9738, Recall: 0.9748, F1: 0.9743
+	Learning Rate (LR): 0.000980
+
+
+Validation Accuracy: 97.50%   |   [92mThe new best model - Saved![0m
+
+
+--------------------------------------------------------------
+Epoch 10/40
+--------------------------------------------------------------
+
+
+
+Epoch 10 Results:
+	Training Loss (TL): 0.0763, Training Accuracy (TA): 97.20%
+	Validation Loss (VL): 0.0662, Validation Accuracy (VA): 97.57%
+	Precision: 0.9754, Recall: 0.9747, F1: 0.9750
+	Learning Rate (LR): 0.000976
+
+
+Validation Accuracy: 97.57%   |   [92mThe new best model - Saved![0m
+
+
+--------------------------------------------------------------
+Epoch 11/40
+--------------------------------------------------------------
+
+
+
+Epoch 11 Results:
+	Training Loss (TL): 0.0761, Training Accuracy (TA): 97.21%
+	Validation Loss (VL): 0.0672, Validation Accuracy (VA): 97.58%
+	Precision: 0.9745, Recall: 0.9758, F1: 0.9752
+	Learning Rate (LR): 0.000970
+
+
+Validation Accuracy: 97.58%   |   [92mThe new best model - Saved![0m
+
+
+--------------------------------------------------------------
+Epoch 12/40
+--------------------------------------------------------------
+
+
+
+Epoch 12 Results:
+	Training Loss (TL): 0.0743, Training Accuracy (TA): 97.32%
+	Validation Loss (VL): 0.0805, Validation Accuracy (VA): 96.99%
+	Precision: 0.9672, Recall: 0.9719, F1: 0.9692
+	Learning Rate (LR): 0.000965
+
+
+Validation Accuracy: 96.99%   |   
+
+
+--------------------------------------------------------------
+Epoch 13/40
+--------------------------------------------------------------
+
+
+
+Epoch 13 Results:
+	Training Loss (TL): 0.0731, Training Accuracy (TA): 97.34%
+	Validation Loss (VL): 0.0629, Validation Accuracy (VA): 97.72%
+	Precision: 0.9770, Recall: 0.9761, F1: 0.9765
+	Learning Rate (LR): 0.000959
+
+
+Validation Accuracy: 97.72%   |   [92mThe new best model - Saved![0m
+
+
+--------------------------------------------------------------
+Epoch 14/40
+--------------------------------------------------------------
+
+
+
+Epoch 14 Results:
+	Training Loss (TL): 0.0720, Training Accuracy (TA): 97.40%
+	Validation Loss (VL): 0.0660, Validation Accuracy (VA): 97.54%
+	Precision: 0.9738, Recall: 0.9759, F1: 0.9748
+	Learning Rate (LR): 0.000952
+
+
+Validation Accuracy: 97.54%   |   
+
+
+--------------------------------------------------------------
+Epoch 15/40
+--------------------------------------------------------------
+
+
+
+Epoch 15 Results:
+	Training Loss (TL): 0.0715, Training Accuracy (TA): 97.36%
+	Validation Loss (VL): 0.0709, Validation Accuracy (VA): 97.43%
+	Precision: 0.9724, Recall: 0.9751, F1: 0.9737
+	Learning Rate (LR): 0.000946
+
+
+Validation Accuracy: 97.43%   |   
+
+
+--------------------------------------------------------------
+Epoch 16/40
+--------------------------------------------------------------
+
+
+
+Epoch 16 Results:
+	Training Loss (TL): 0.0710, Training Accuracy (TA): 97.43%
+	Validation Loss (VL): 0.0718, Validation Accuracy (VA): 97.34%
+	Precision: 0.9756, Recall: 0.9700, F1: 0.9725
+	Learning Rate (LR): 0.000938
+
+
+Validation Accuracy: 97.34%   |   
+
+
+--------------------------------------------------------------
+Epoch 17/40
+--------------------------------------------------------------
+
+
+
+Epoch 17 Results:
+	Training Loss (TL): 0.0699, Training Accuracy (TA): 97.44%
+	Validation Loss (VL): 0.0688, Validation Accuracy (VA): 97.25%
+	Precision: 0.9699, Recall: 0.9741, F1: 0.9718
+	Learning Rate (LR): 0.000930
+
+
+Validation Accuracy: 97.25%   |   
+
+
+--------------------------------------------------------------
+Epoch 18/40
+--------------------------------------------------------------
+
+
+
+Epoch 18 Results:
+	Training Loss (TL): 0.0692, Training Accuracy (TA): 97.48%
+	Validation Loss (VL): 0.0625, Validation Accuracy (VA): 97.62%
+	Precision: 0.9741, Recall: 0.9772, F1: 0.9756
+	Learning Rate (LR): 0.000922
+
+
+Validation Accuracy: 97.62%   |   
+
+
+--------------------------------------------------------------
+Epoch 19/40
+--------------------------------------------------------------
+
+
+
+Epoch 19 Results:
+	Training Loss (TL): 0.0692, Training Accuracy (TA): 97.53%
+	Validation Loss (VL): 0.0740, Validation Accuracy (VA): 97.35%
+	Precision: 0.9751, Recall: 0.9706, F1: 0.9727
+	Learning Rate (LR): 0.000914
+
+
+Validation Accuracy: 97.35%   |   
+
+
+--------------------------------------------------------------
+Epoch 20/40
+--------------------------------------------------------------
+
+
+
+Epoch 20 Results:
+	Training Loss (TL): 0.0674, Training Accuracy (TA): 97.56%
+	Validation Loss (VL): 0.0641, Validation Accuracy (VA): 97.57%
+	Precision: 0.9762, Recall: 0.9739, F1: 0.9750
+	Learning Rate (LR): 0.000905
+
+
+Validation Accuracy: 97.57%   |   
+
+
+--------------------------------------------------------------
+Epoch 21/40
+--------------------------------------------------------------
+
+
+
+Epoch 21 Results:
+	Training Loss (TL): 0.0671, Training Accuracy (TA): 97.55%
+	Validation Loss (VL): 0.0784, Validation Accuracy (VA): 96.81%
+	Precision: 0.9648, Recall: 0.9709, F1: 0.9674
+	Learning Rate (LR): 0.000895
+
+
+Validation Accuracy: 96.81%   |   
+
+
+--------------------------------------------------------------
+Epoch 22/40
+--------------------------------------------------------------
+
+
+
+Epoch 22 Results:
+	Training Loss (TL): 0.0673, Training Accuracy (TA): 97.57%
+	Validation Loss (VL): 0.0603, Validation Accuracy (VA): 97.79%
+	Precision: 0.9771, Recall: 0.9775, F1: 0.9773
+	Learning Rate (LR): 0.000885
+
+
+Validation Accuracy: 97.79%   |   [92mThe new best model - Saved![0m
+
+
+--------------------------------------------------------------
+Epoch 23/40
+--------------------------------------------------------------
+
+
+
+Epoch 23 Results:
+	Training Loss (TL): 0.0660, Training Accuracy (TA): 97.60%
+	Validation Loss (VL): 0.0705, Validation Accuracy (VA): 97.54%
+	Precision: 0.9764, Recall: 0.9729, F1: 0.9746
+	Learning Rate (LR): 0.000875
+
+
+Validation Accuracy: 97.54%   |   
+
+
+--------------------------------------------------------------
+Epoch 24/40
+--------------------------------------------------------------
+
+
+
+Epoch 24 Results:
+	Training Loss (TL): 0.0666, Training Accuracy (TA): 97.57%
+	Validation Loss (VL): 0.0621, Validation Accuracy (VA): 97.73%
+	Precision: 0.9763, Recall: 0.9770, F1: 0.9767
+	Learning Rate (LR): 0.000864
+
+
+Validation Accuracy: 97.73%   |   
+
+
+--------------------------------------------------------------
+Epoch 25/40
+--------------------------------------------------------------
+
+
+
+Epoch 25 Results:
+	Training Loss (TL): 0.0651, Training Accuracy (TA): 97.64%
+	Validation Loss (VL): 0.0587, Validation Accuracy (VA): 97.84%
+	Precision: 0.9775, Recall: 0.9780, F1: 0.9778
+	Learning Rate (LR): 0.000854
+
+
+Validation Accuracy: 97.84%   |   [92mThe new best model - Saved![0m
+
+
+--------------------------------------------------------------
+Epoch 26/40
+--------------------------------------------------------------
+
+
+
+Epoch 26 Results:
+	Training Loss (TL): 0.0653, Training Accuracy (TA): 97.66%
+	Validation Loss (VL): 0.0594, Validation Accuracy (VA): 97.77%
+	Precision: 0.9772, Recall: 0.9769, F1: 0.9770
+	Learning Rate (LR): 0.000842
+
+
+Validation Accuracy: 97.77%   |   
+
+
+--------------------------------------------------------------
+Epoch 27/40
+--------------------------------------------------------------
+
+
+
+Epoch 27 Results:
+	Training Loss (TL): 0.0641, Training Accuracy (TA): 97.70%
+	Validation Loss (VL): 0.0764, Validation Accuracy (VA): 97.06%
+	Precision: 0.9676, Recall: 0.9730, F1: 0.9699
+	Learning Rate (LR): 0.000831
+
+
+Validation Accuracy: 97.06%   |   
+
+
+--------------------------------------------------------------
+Epoch 28/40
+--------------------------------------------------------------
+
+
+
+Epoch 28 Results:
+	Training Loss (TL): 0.0638, Training Accuracy (TA): 97.65%
+	Validation Loss (VL): 0.0571, Validation Accuracy (VA): 98.00%
+	Precision: 0.9797, Recall: 0.9791, F1: 0.9794
+	Learning Rate (LR): 0.000819
+
+
+Validation Accuracy: 98.00%   |   [92mThe new best model - Saved![0m
+
+
+--------------------------------------------------------------
+Epoch 29/40
+--------------------------------------------------------------
+
+
+
+Epoch 29 Results:
+	Training Loss (TL): 0.0626, Training Accuracy (TA): 97.71%
+	Validation Loss (VL): 0.0784, Validation Accuracy (VA): 97.07%
+	Precision: 0.9678, Recall: 0.9729, F1: 0.9700
+	Learning Rate (LR): 0.000806
+
+
+Validation Accuracy: 97.07%   |   
+
+
+--------------------------------------------------------------
+Epoch 30/40
+--------------------------------------------------------------
+
+
+
+Epoch 30 Results:
+	Training Loss (TL): 0.0630, Training Accuracy (TA): 97.74%
+	Validation Loss (VL): 0.0671, Validation Accuracy (VA): 97.49%
+	Precision: 0.9771, Recall: 0.9714, F1: 0.9740
+	Learning Rate (LR): 0.000794
+
+
+Validation Accuracy: 97.49%   |   
+
+
+--------------------------------------------------------------
+Epoch 31/40
+--------------------------------------------------------------
+
+
+
+Epoch 31 Results:
+	Training Loss (TL): 0.0622, Training Accuracy (TA): 97.75%
+	Validation Loss (VL): 0.0587, Validation Accuracy (VA): 97.88%
+	Precision: 0.9794, Recall: 0.9770, F1: 0.9782
+	Learning Rate (LR): 0.000781
+
+
+Validation Accuracy: 97.88%   |   
+
+
+--------------------------------------------------------------
+Epoch 32/40
+--------------------------------------------------------------
+
+
+
+Epoch 32 Results:
+	Training Loss (TL): 0.0611, Training Accuracy (TA): 97.78%
+	Validation Loss (VL): 0.0703, Validation Accuracy (VA): 97.28%
+	Precision: 0.9699, Recall: 0.9750, F1: 0.9721
+	Learning Rate (LR): 0.000768
+
+
+Validation Accuracy: 97.28%   |   
+
+
+--------------------------------------------------------------
+Epoch 33/40
+--------------------------------------------------------------
+
+
+
+Epoch 33 Results:
+	Training Loss (TL): 0.0617, Training Accuracy (TA): 97.77%
+	Validation Loss (VL): 0.0612, Validation Accuracy (VA): 97.81%
+	Precision: 0.9764, Recall: 0.9788, F1: 0.9775
+	Learning Rate (LR): 0.000755
+
+
+Validation Accuracy: 97.81%   |   
+
+
+--------------------------------------------------------------
+Epoch 34/40
+--------------------------------------------------------------
+
+
+
+Epoch 34 Results:
+	Training Loss (TL): 0.0604, Training Accuracy (TA): 97.86%
+	Validation Loss (VL): 0.0593, Validation Accuracy (VA): 97.91%
+	Precision: 0.9805, Recall: 0.9766, F1: 0.9784
+	Learning Rate (LR): 0.000741
+
+
+Validation Accuracy: 97.91%   |   
+
+
+--------------------------------------------------------------
+Epoch 35/40
+--------------------------------------------------------------
+
+
+
+Epoch 35 Results:
+	Training Loss (TL): 0.0597, Training Accuracy (TA): 97.87%
+	Validation Loss (VL): 0.0548, Validation Accuracy (VA): 97.94%
+	Precision: 0.9795, Recall: 0.9782, F1: 0.9788
+	Learning Rate (LR): 0.000727
+
+
+Validation Accuracy: 97.94%   |   
+
+
+--------------------------------------------------------------
+Epoch 36/40
+--------------------------------------------------------------
+
+
+
+Epoch 36 Results:
+	Training Loss (TL): 0.0590, Training Accuracy (TA): 97.87%
+	Validation Loss (VL): 0.0556, Validation Accuracy (VA): 97.94%
+	Precision: 0.9781, Recall: 0.9795, F1: 0.9788
+	Learning Rate (LR): 0.000713
+
+
+Validation Accuracy: 97.94%   |   
+
+
+--------------------------------------------------------------
+Epoch 37/40
+--------------------------------------------------------------
+
+
+
+Epoch 37 Results:
+	Training Loss (TL): 0.0598, Training Accuracy (TA): 97.83%
+	Validation Loss (VL): 0.0518, Validation Accuracy (VA): 98.21%
+	Precision: 0.9826, Recall: 0.9807, F1: 0.9816
+	Learning Rate (LR): 0.000699
+
+
+Validation Accuracy: 98.21%   |   [92mThe new best model - Saved![0m
+
+
+--------------------------------------------------------------
+Epoch 38/40
+--------------------------------------------------------------
+
+
+
+Epoch 38 Results:
+	Training Loss (TL): 0.0588, Training Accuracy (TA): 97.90%
+	Validation Loss (VL): 0.0612, Validation Accuracy (VA): 97.83%
+	Precision: 0.9787, Recall: 0.9766, F1: 0.9776
+	Learning Rate (LR): 0.000684
+
+
+Validation Accuracy: 97.83%   |   
+
+
+--------------------------------------------------------------
+Epoch 39/40
+--------------------------------------------------------------
+
+
+
+Epoch 39 Results:
+	Training Loss (TL): 0.0586, Training Accuracy (TA): 97.89%
+	Validation Loss (VL): 0.0529, Validation Accuracy (VA): 98.14%
+	Precision: 0.9817, Recall: 0.9801, F1: 0.9809
+	Learning Rate (LR): 0.000669
+
+
+Validation Accuracy: 98.14%   |   
+
+
+--------------------------------------------------------------
+Epoch 40/40
+--------------------------------------------------------------
+
+
+
+Epoch 40 Results:
+	Training Loss (TL): 0.0568, Training Accuracy (TA): 97.95%
+	Validation Loss (VL): 0.0687, Validation Accuracy (VA): 97.48%
+	Precision: 0.9722, Recall: 0.9767, F1: 0.9742
+	Learning Rate (LR): 0.000655
+
+
+Validation Accuracy: 97.48%   |   
+
+
+==============================================================
+TRAINING COMPLETED
+==============================================================
+
+Best validation accuracy: 98.21% (Epoch 37)
+
+==============================================================
+Generating Training Visualisations
+==============================================================
+
+Starting comprehensive evaluation...
+Model evaluation completed, calculating metrics...
+Metrics calculated, generating plots...
+Generating training curves...
+Generating confusion matrix...
+Generating ROC curve...
+Generating metrics summary...
+All plots generated successfully!
+
+All plots generated successfully!
+
+==============================================================
+Testing ResNet-50 model...
+==============================================================
+
+Evaluation Complete
+
+Test Accuracy: 97.89%
+
+Test Precision: 0.9796   |   Test Recall: 0.9770
+Test F1-Score: 0.9782   |   Test ROC-AUC: 0.9979
+
+==============================================================
+=                    MODEL CYCLE COMPLETE                    =
+==============================================================
+
+==============================================================
+FINAL RESULTS SUMMARY
+==============================================================
+Best Validation Accuracy: 98.21% (achieved at Epoch 37)
+Final Test Accuracy: 97.89%
+Final Test Loss: 0.0567
+Model saved to: ../../Results/models/ResNet50_best.pth
+
+Performance Analysis:
+Excellent performance! Model achieved SOTA accuracy.
+==============================================================
+ResNet-50 training completed successfully!
+Check the Results directory for saved model, logs, and plots
+==============================================================
+
+==============================================================
+ANALYZING MISCLASSIFIED IMAGES
+==============================================================
+
+==============================================================
+ANALYZING MISCLASSIFIED IMAGES
+==============================================================
+
+
+Total misclassified images: 428
+Results saved to: ../../Results/misclassified\ResNet-50_misclassified_20251003_033208.csv
+
+Misclassification Breakdown:
+  Female → Male: 138 images
+  Male → Female: 290 images
+
+Sample Misclassifications (first 5):
+  1. 111414.jpg
+     True: Male, Predicted: Female
+     Confidence - Female: 0.9735, Male: 0.0265
+  2. 167309.jpg
+     True: Male, Predicted: Female
+     Confidence - Female: 0.5606, Male: 0.4394
+  3. 146900.jpg
+     True: Male, Predicted: Female
+     Confidence - Female: 0.8217, Male: 0.1783
+  4. 028547.jpg
+     True: Male, Predicted: Female
+     Confidence - Female: 0.9612, Male: 0.0388
+  5. 131185.jpg
+     True: Male, Predicted: Female
+     Confidence - Female: 0.9544, Male: 0.0456
+  ... and 423 more
+
+==============================================================
+
+==============================================================

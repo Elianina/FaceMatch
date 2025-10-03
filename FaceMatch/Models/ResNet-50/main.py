@@ -53,8 +53,8 @@ def main():
 
 
         'batch_size': 32, # 64, 32, 16
-        'num_epochs': 1,
-        'num_workers': 4,
+        'num_epochs': 40,
+        'num_workers': 12,
         'train_ratio': 0.8,
         'val_ratio': 0.1,      # 10% val, remaining 10% test
 

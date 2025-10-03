@@ -58,7 +58,7 @@ def main():
         'attr_file': r"C:\\Users\\carlf\\Desktop\\COSC595 - Models and Datasets\\CelebA\\list_attr_celeba.csv",
 
         'batch_size': 24,  # Conservative batch size for EfficientNet-B4
-        'num_epochs': 1,  # Number of training epochs
+        'num_epochs': 40,  # Number of training epochs
         'num_workers': 12,  # Parallel data loading processes
         'train_ratio': 0.8,  # 80% of data used for training
         'val_ratio': 0.1,  # 10% for validation, remaining 10% aside for testing
