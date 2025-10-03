@@ -339,10 +339,33 @@ of any potential negative impacts on the targeted individual/s, prior to deploym
 
 ---
 
-## License
-This project is for academic purposes as part of COSC595 at the University of New England.
+## Licence
+MIT License
+
+Copyright © 2025 Carl Fokstuen, Mark Malady, & YuTing Lee.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy 
+of this software and associated documentation files (the “Software”), to deal 
+in the Software without restriction, including without limitation the rights 
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
+copies of the Software, and to permit persons to whom the Software is furnished 
+to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in 
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+**Note:** This licence was taken verbatim from the Open Source Initiative article titled:   
+The MIT Licence (https://opensource.org/license/mit).
 
 ---
 
 ## Contact
-For questions or issues, contact the project team through the GitHub repository or UNE email.
+For questions or issues, contact the project team through the GitHub repository, or the team's supervisory staff, care of
+The University of New England (UNE).
