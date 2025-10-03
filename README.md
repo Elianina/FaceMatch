@@ -17,6 +17,7 @@
 This document constitutes the project implementation's technical handbook.   
 
 This project implements and evaluates four deep learning architectures for the binary gender classification problem from two-dimensional facial images.   
+
 The models are compared for accuracy, efficiency, and are as follows:
 
 1. **VGG-16**
@@ -40,9 +41,9 @@ If you do not have the CelebA dataset locally:
 ## Prerequisites
 
 - **Anaconda or Miniconda** installed
-- **CUDA-capable GPU** (recommended: NVIDIA RTX 3080 Ti or equivalent)
+- **CUDA-capable GPU** NVIDIA RTX 3080 Ti used in training for this project
 - **16GB+ RAM** for training
-- **50GB+ storage** for dataset and model checkpoints
+- **~10GB/+ storage** for dataset and model checkpoints
 
 
 ### CelebA Dataset
@@ -56,9 +57,9 @@ If you don't have the CelebA dataset locally:
 ## Dependencies
 
 ### Core Requirements
-- Python 3.9+
-- PyTorch 2.0.1+
-- CUDA 11.8+ (for GPU training)
+- Python 3.1x
+- PyTorch 2.x
+- CUDA 1x
 
 ### Required Packages
 ```txt
