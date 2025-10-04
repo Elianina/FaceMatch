@@ -52,8 +52,8 @@ def main():
 
     CONFIG = {
         # Paths to CelebA dataset files and directories
-        'img_dir': r"",
-        'attr_file': r"",
+        'img_dir': r"C:\\Users\\carlf\\Desktop\\COSC595 - Models and Datasets\\CelebA\\img_align_celeba\\img_align_celeba",
+        'attr_file': r"C:\\Users\\carlf\\Desktop\\COSC595 - Models and Datasets\\CelebA\\list_attr_celeba.csv",
 
         'batch_size': 32,  # Conservative batch size for VGG-16
         'num_epochs': 40,  # Number of training epochs
